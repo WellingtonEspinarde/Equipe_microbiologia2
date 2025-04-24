@@ -16,7 +16,7 @@ class Professor extends Pessoa {
     }
 
     public function setNumeroIdentificador($numeroIdentificador){
-    $this-> numeroIdentificador = $numeroIdentificador;
+    $this-> numeroIdentificador = $numeroIdentificador; //teste
     }
 
 

@@ -1,5 +1,5 @@
 <?php
-class Professor extends Pessoa {
+class Professor extends Usuario {
     private $numeroIdentificador;
 
 }

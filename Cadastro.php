@@ -8,20 +8,28 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class= "">
+
+
+
+<body>
+
+    <nav class="navbar bg-light">
+        <div class="container">
+            <a href="Home.php" class="navbar-brand d-flex align-items-center">HOME</a>
+            <a href="login.php" class="navbar-brand d-flex align-items-center">LOGUIN</a>
+        </div>
+    </nav>
+
+
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-6">
-
-                    <div class="mp-3">
-                        <a href="Home.html">HOME</a>
-                    </div>
-            
                 <div class="card">
-                    <div class="card-header bg-primary text-white text-center">
+                    <div class="card-header bg-primary text-white text-center border-black">
                         <h3>Cadastro de Usuário</h3>
-
                     </div>
+
+
                     <div class="card-body">
                         <form action="#" method="POST">
 

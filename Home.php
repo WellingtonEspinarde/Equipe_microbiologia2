@@ -8,6 +8,23 @@
 </head>
 <body>
 
+<div class="row">
+            <div class="container-fluid">
+                <nav class="navbar bg-dark">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Cadastro.php">Cadastrar Paciente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.php">Login Paciente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="EsqueciSenha.php">Esqueci minha senha</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
 
     <div class="container text-center">
         <header class="my-4">
@@ -25,23 +42,7 @@
                 </div>
         </div>
     
-        <div class="row">
-            <div class="container-fluid">
-                <nav class="navbar bg-dark">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="Cadastro.php">Cadastrar Paciente</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.php">Login Paciente</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="EsqueciSenha.php">Esqueci minha senha</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        
         
     </div>
 

@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="bg-success">
+<body>
 
   <div class="container">
     <div class="row">

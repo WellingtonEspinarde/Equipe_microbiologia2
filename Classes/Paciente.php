@@ -1,6 +1,6 @@
 <?php
 
-class Paciente extends Pessoa{
+class Paciente extends Usuario{
     
     private $exames;
     private $resultados;

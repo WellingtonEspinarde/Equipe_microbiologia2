@@ -71,10 +71,6 @@
              return "Nome: {$this->nome} - Id: {$this->id} - Data de Nascimento: {$this->dataNascimento} - Cpf: {$this->cpf} - Email: {$this->email} - Endereço: {$this->endereco}";
         }
 
-
-
-
-
     }
 
 

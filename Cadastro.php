@@ -11,19 +11,20 @@
 
 
 
-<body>
+<body class="bg-success">
 
-    <nav class="navbar bg-light">
-        <div class="container">
-            <a href="Home.php" class="navbar-brand d-flex align-items-center">HOME</a>
-            <a href="login.php" class="navbar-brand d-flex align-items-center">LOGUIN</a>
-        </div>
-    </nav>
-
+    <div class="conteiner p-4">
+        <nav class="navbar bg-dark ">
+            <div class="container">
+                <a href="Home.php" class="navbar-brand text-primary d-flex align-items-center">HOME</a>
+                <a href="login.php" class="navbar-brand text-primary d-flex align-items-center">LOGUIN</a>
+            </div>
+        </nav>
+    </div>
 
     <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-6">
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-5">
                 <div class="card">
                     <div class="card-header bg-primary text-white text-center border-black">
                         <h3>Cadastro de Usuário</h3>

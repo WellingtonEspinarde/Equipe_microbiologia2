@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+
     <div class="container">
         <header class="my-4">
             <h1>Seja Bem vindo!</h1>
@@ -16,10 +18,16 @@
         <div class="col">
             <h2>Microbiologia</h2>
         </div>
+
+        <div class="row">
+                <div class="jumbotron">
+                    <h2 class="display-4">Acesse as funcionalidades do Sistema!</h2>
+                </div>
+        </div>
     
         <div class="row">
-            <div class="col-2">
-                <nav>
+            <div class="container-fluid">
+                <nav class="navbar bg-dark">
                     <ul class="nav">
                         <li class="nav-item">
                             <a class="nav-link" href="Cadastro.php">Cadastrar Paciente</a>
@@ -33,13 +41,6 @@
                     </ul>
                 </nav>
             </div>
-        </div>
-
-        <div class="row">
-            
-                <div class="jumbotron">
-                    <h2 class="display-4">Acesse as funcionalidades do Sistema!</h2>
-                </div>
         </div>
         
     </div>

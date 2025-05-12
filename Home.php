@@ -45,8 +45,6 @@
                     <h2 class="display-4">Acesse as funcionalidades do Sistema!</h2>
                 </div>
         </div>
-<<<<<<< Updated upstream
-=======
 
         <div class="container my-5">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -72,7 +70,6 @@
     </div>
 </div>
 
->>>>>>> Stashed changes
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

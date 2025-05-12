@@ -17,5 +17,10 @@ class Professor extends Usuario {
         $this-> numeroIdentificador = $numeroIdentificador; //teste
         }
 
+        public function __toString() {
+    return parent::__toString() . " - Número Identificador: {$this->numeroIdentificador}";
+}
+
+
     }
 ?>

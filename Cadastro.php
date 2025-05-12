@@ -11,7 +11,7 @@
 
 
 
-<body class="bg-success">
+<body>
 
     <div class="conteiner p-4">
         <nav class="navbar bg-dark ">

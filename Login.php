@@ -25,7 +25,7 @@
 
       </div>
 
-      <div class="col-5 border mt-5 bg-light p-5">
+      <div class="col-5 border mt-5 bg-light p-5 text-center">
         <h1 class="display-3">Login</h1>
         <form action="Login.html" method="post">
           <div class="mb-3">
@@ -44,7 +44,10 @@
           <div class="mb-3">
           </div>
           <button type="submit" class="btn btn-success">Entrar</button>
-          <button><a href="EsqueciSenha.html">Esqueci minha senha</a></button>
+          <button type="EsqueciSenha.php" class="btn btn-success">Esqueci a Senha</button>
+          
+        
+        
           
           
         </form>

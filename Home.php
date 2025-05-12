@@ -22,13 +22,13 @@
                 <nav>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="Cadastro.html">Cadastrar Paciente</a>
+                            <a class="nav-link" href="Cadastro.php">Cadastrar Paciente</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login Paciente</a>
+                            <a class="nav-link" href="login.php">Login Paciente</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="EsqueciSenha.html">Esqueci minha senha</a>
+                            <a class="nav-link" href="EsqueciSenha.php">Esqueci minha senha</a>
                         </li>
                     </ul>
                 </nav>

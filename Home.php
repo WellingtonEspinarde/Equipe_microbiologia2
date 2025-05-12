@@ -9,7 +9,7 @@
 <body>
 
 
-    <div class="container">
+    <div class="container text-center">
         <header class="my-4">
             <h1>Seja Bem vindo!</h1>
             <p class="lead">Crie uma conta ou faça login</p>

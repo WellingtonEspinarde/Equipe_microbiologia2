@@ -14,13 +14,12 @@ class Professor extends Usuario {
         }
     
         public function setNumeroIdentificador($numeroIdentificador){
-        $this-> numeroIdentificador = $numeroIdentificador; //teste
+        $this-> numeroIdentificador = $numeroIdentificador; 
         }
 
         public function __toString() {
     return parent::__toString() . " - Número Identificador: {$this->numeroIdentificador}";
-}
-
+    }
 
     }
 ?>

@@ -1,6 +1,5 @@
 <?php
 class Paciente extends Usuario{
-    
     private $exames;
     private $resultados;
     private $historicoMecido;
@@ -49,7 +48,7 @@ class Paciente extends Usuario{
     }
 
     public function __toString(){
-        return "Exane: {$this->exames} - Resultado: {$this->resultados} - Historico Medico: {$this->historicoMecido} - Aluno Responsavel: {$this->alunoResponsavel}";
+        return parent::__toString(). "Exame: {$this->exames} - Resultado: {$this->resultados} - Historico Medico: {$this->historicoMecido} - Aluno Responsavel: {$this->alunoResponsavel}";
     }
 
   }

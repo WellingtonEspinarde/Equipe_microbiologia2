@@ -3,7 +3,6 @@ class Professor extends Usuario {
     private $numeroIdentificador;
 
     public function __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco, $numeroIdentificador){
-
         parent:: __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco);
         $this->numeroIdentificador = $numeroIdentificador;
     

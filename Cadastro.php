@@ -13,7 +13,7 @@
         <nav class="navbar bg-dark ">
             <div class="container">
                 <a href="Home.php" class="navbar-brand text-primary d-flex align-items-center">HOME</a>
-                <a href="login.php" class="navbar-brand text-primary d-flex align-items-center">LOGUIN</a>
+                <a href="login.php" class="navbar-brand text-primary d-flex align-items-center">LOGIN</a>
             </div>
         </nav>
     </div>
@@ -53,6 +53,16 @@
                               <div class="mb-3">
                                 <input type="radio" class="form-check-input" name="genero" value="O">
                                 <label for="genero" class="form-check-label">Outro</label>
+                              </div>
+
+                              <div class="mb-3">
+                                <input type="radio" class="form-check-input" name="Func" value="ALUN">
+                                <label for="ALUNO" class="form-check-label">Discente</label>
+                              </div>
+
+                              <div class="mb-3">
+                                <input type="radio" class="form-check-input" name="Func" value="PROF">
+                                <label for="PROFESOR" class="form-check-label">Docente</label>
                               </div>
 
                             <div class="mb-3">

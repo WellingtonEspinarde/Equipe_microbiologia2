@@ -14,12 +14,12 @@
                 <nav class="navbar bg-dark">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="Cadastro.php">CADASTRAR PACIENTE</a>
+                            <a class="nav-link" href="Cadastro.php">CADASTRO</a>
                         </li>
                     </ul>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">LOGIN PACIENTE</a>
+                            <a class="nav-link" href="login.php">LOGIN</a>
                         </li>
                     </ul>
                     <ul class="nav">                

@@ -14,7 +14,7 @@
     <div class="row">
       <div class="col mb-3"></div>
       <div class="col-5 border mt-5 bg-light p-5">
-        <h1 class="display-3">Esqueci minha senha</h1>
+        <h1 class="display-3">Recuperar Conta</h1>
         <form action="EsqueciSenha.html" method="post">
           <div class="mb-3">
             <label for="email" class="form-label">E-mail</label>
@@ -36,7 +36,12 @@
 
           <div class="mb-3">
           </div>
-          <button type="submit" class="btn btn-success">Salvar senha</button>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Confirmar</button>
+            
+        </div>
+
         </form>
       </div>
       <div class="col"></div>

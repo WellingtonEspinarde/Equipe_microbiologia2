@@ -5,9 +5,15 @@ $bancodedados = "usuario"
 $usuario = "root";
 $senha = "";
 
-$mysql = new mysqli($hostname , $usuario, $senha, $bancodedados);
-if ($mysqli ->connect_errno ){
-    echo "Falha ao conencatar (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+$conect = new mysqli($hostname , $usuario, $senha, $bancodedados);
+
+
+if ($conect ->connect_errno ){
+    echo "Falha ao conectar!";
+
+}else{
+    echo " Conexão Bem Sucedida!"
 }
+
 
 ?>

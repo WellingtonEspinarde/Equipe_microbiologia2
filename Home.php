@@ -14,17 +14,17 @@
                 <nav class="navbar bg-dark">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="Cadastro.php">CADASTRO</a>
+                            <a class="nav-link" href="Cadastro.php">Login Técnicos</a>
                         </li>
                     </ul>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">LOGIN</a>
+                            <a class="nav-link" href="login.php">Login Pacientes</a>
                         </li>
                     </ul>
                     <ul class="nav">                
                         <li class="nav-item">
-                            <a class="nav-link" href="EsqueciSenha.php">ESQUECI MINHA SENHA</a>
+                            <a class="nav-link" href="EsqueciSenha.php">Recuperar Senha</a>
                         </li>
                     </ul>
                 </nav>

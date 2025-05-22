@@ -34,10 +34,15 @@
 
           <div class="mb-3">
           </div>
-          <button type="submit" class="btn btn-success">Entrar</button>
-          <button type="EsqueciSenha.php" class="btn btn-success">Esqueci a Senha</button>
           
-        
+          
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+
+        <div class="card-footer text-center m-3">
+            <p>Esqueceu a Senha? <a href="EsqueciSenha.php">Recuperar a Conta</a></p>
+        </div>
         
           
           

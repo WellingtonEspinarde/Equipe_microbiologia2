@@ -54,10 +54,10 @@
                 <img src="Imagem/cientista-de-perto-usando-microscopio_23-2148882096.avif" class="img-fluid" alt="Imagem 1">
             </div>
             <div class="carousel-item">
-                <img src="Imagem/um-cientista-embacado-segurando-uma-placa-de-petri_23-2148882109.avif" class="img-fluid" alt="Imagem 2">
+                <img src="Imagem/mulher-trabalhando-em-laboratorio_23-2148824172.avif" class="img-fluid" alt="Imagem 2">
             </div>
             <div class="carousel-item">
-                <img src="Imagem/mulher-trabalhando-em-laboratorio_23-2148824172.avif" class="img-fluid" alt="Imagem 3">
+                <img src="Imagem/um-cientista-embacado-segurando-uma-placa-de-petri_23-2148882109.avif" class="img-fluid" alt="Imagem 3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">

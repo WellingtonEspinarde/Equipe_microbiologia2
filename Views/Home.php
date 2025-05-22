@@ -7,26 +7,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
+<body background-color >
 
 <div class="row">
             <div class="container-fluid p-4">
                 <nav class="navbar bg-dark">
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="Cadastro.php">Login Técnicos</a>
+                            <a class="nav-link" href="LoginTecnico.php">Login Técnicos</a>
                         </li>
                     </ul>
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="login.php">Login Pacientes</a>
+                            <a class="nav-link" href="LoginPaciente.php">Login Pacientes</a>
                         </li>
                     </ul>
                     <ul class="nav">                
                         <li class="nav-item">
-                            <a class="nav-link" href="EsqueciSenha.php">Recuperar Senha</a>
+                            <a class="nav-link" href="EsqueciSenha.php">Recuperar Conta</a>
                         </li>
                     </ul>
+
                 </nav>
             </div>
         </div>
@@ -34,11 +35,10 @@
     <div class="container text-center card bg-success">
         <header class="my-4">
             <h1>Seja Bem vindo!</h1>
-            <p class="lead">Crie uma conta ou faça login</p>
-     </header>
+        </header>
      
         <div class="col">
-            <h2>Microbiologia</h2>
+            <h2>Exames de Microbiologia</h2>
         </div>
 
         <div class="row">

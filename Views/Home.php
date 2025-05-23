@@ -32,7 +32,7 @@
             </div>
         </div>
 
-    <div class="container text-center card bg-success">
+    <div class="container text-center card bg-success"> //////
         <header class="my-4">
             <h1>Seja Bem vindo!</h1>
         </header>

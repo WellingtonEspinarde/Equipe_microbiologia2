@@ -1,5 +1,5 @@
 <?php
-/*class ConnectionFactory { // padrão singleton
+class ConnectionFactory { // padrão singleton
     static $connection;
 
     public static function getConnection() {
@@ -21,5 +21,5 @@
 
         return self::$connection;
     }
-}*/
+}
 ?>

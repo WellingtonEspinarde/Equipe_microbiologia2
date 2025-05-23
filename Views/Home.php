@@ -5,26 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body background-color >
+<body>
 
 <div class="row">
             <div class="container-fluid p-4">
-                <nav class="navbar bg-dark">
+                <nav class="navbar" background-color:rgb 185, 217, 222 >
+
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="LoginTecnico.php">Login Técnicos</a>
+                            <a class="navbar-brand text-black" href="LoginTecnico.php">Login Técnicos</a>
                         </li>
                     </ul>
+
                     <ul class="nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="LoginPaciente.php">Login Pacientes</a>
+                            <a class="navbar-brand text-black" href="LoginPaciente.php">Login Pacientes</a>
                         </li>
                     </ul>
+
+                     <ul class="nav">
+                        <li class="nav-item">
+                            <a class="navbar-brand text-black" href="Cadastro.php">Cadastrar Técnicos</a>
+                        </li>
+                    </ul>
+
                     <ul class="nav">                
                         <li class="nav-item">
-                            <a class="nav-link" href="EsqueciSenha.php">Recuperar Conta</a>
+                            <a class="navbar-brand text-black" href="EsqueciSenha.php">Recuperar Conta</a>
                         </li>
                     </ul>
 
@@ -32,7 +42,7 @@
             </div>
         </div>
 
-    <div class="container text-center card bg-success"> //////
+    <div class="container sem-borda text-center card "style= "background-color:rgb(177, 238, 190);">  <!-- sem borde/ css-->
         <header class="my-4">
             <h1>Seja Bem vindo!</h1>
         </header>
@@ -47,18 +57,33 @@
                 </div>
         </div>
 
-        <div class="container my-5">
+<div class="container my-5">
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Imagem/cientista-de-perto-usando-microscopio_23-2148882096.avif" class="img-fluid" alt="Imagem 1">
+                <img src="Imagem/cientista_microbiologia_1_pipeta.png" class="img-fluid" alt="Imagem 1">
             </div>
+
             <div class="carousel-item">
-                <img src="Imagem/mulher-trabalhando-em-laboratorio_23-2148824172.avif" class="img-fluid" alt="Imagem 2">
+                <img src="Imagem/cientista_microbiologia_2_petri.png" class="img-fluid" alt="Imagem 2">
             </div>
+
             <div class="carousel-item">
-                <img src="Imagem/um-cientista-embacado-segurando-uma-placa-de-petri_23-2148882109.avif" class="img-fluid" alt="Imagem 3">
+                <img src="Imagem/cientista_microbiologia_3_anotando.png" class="img-fluid" alt="Imagem 3">
             </div>
+
+            <div class="carousel-item">
+                <img src="Imagem/cientista_microbiologia_4_microscopio.png" class="img-fluid" alt="Imagem 4">
+            </div>
+
+            <div class="carousel-item">
+                <img src="Imagem/cientista_microbiologia_5_frasco.png"class="img-fluid" alt="Imagem 5">
+            </div>
+
+             <div class="carousel-item">
+                <img src="Imagem/cientista_microbiologia_6_computador.png"class="img-fluid" alt="Imagem 5">
+            </div>
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -70,7 +95,6 @@
         </button>
     </div>
 </div>
-
     </div>
 </div>
 

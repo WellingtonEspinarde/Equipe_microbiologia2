@@ -5,14 +5,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Login Técnico</title>
 </head>
+
 
 <body>
 
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-5 border mt-5 bg-light p-5 text-center">
+      <div class="card-header text-black text-center border-black">
         <h1 class="display-4 mb-4">Login</h1>
         <form action="ValidaTecnico.php" method="post">
           <div class="mb-3 text-start">

@@ -1,5 +1,5 @@
 <?php
-
+/*
 $hostname = "localhost";
 $bancodedados = "usuario"
 $usuario = "root";
@@ -15,5 +15,5 @@ if ($conect ->connect_errno ){
     echo " Conexão Bem Sucedida!"
 }
 
-
+*/
 ?>

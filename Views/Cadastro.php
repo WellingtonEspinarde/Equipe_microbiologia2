@@ -1,3 +1,23 @@
+<?php
+
+if(isset($_POST['submit'])){
+
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+
+
+
+
+}
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -48,9 +68,16 @@
                             </div>
 
                             <div class="mb-3">
+<<<<<<< Updated upstream
                                 <label for="senha" class="form-label">Senha</label>
                                 <input type="password" class="form-control" id="senha" name="senha" required>
                             </div>
+=======
+                                <label for="genero" class="form-check-label">Masculino</label>
+                                <input type="radio" class="form-check-input" name="genero" value="M">
+                                
+                              </div>
+>>>>>>> Stashed changes
 
                             
                             <div class="mb-3">

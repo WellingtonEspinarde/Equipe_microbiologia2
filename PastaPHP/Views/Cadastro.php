@@ -1,22 +1,3 @@
-<?php
-
-if(isset($_POST['submit'])){
-
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-
-
-
-
-}
-
-
-
-?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">

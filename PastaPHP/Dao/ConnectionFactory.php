@@ -5,7 +5,7 @@ class ConnectionFactory { // padrão singleton
     public static function getConnection() {
         if (!isset(self::$connection)) {
             $host = "localhost";
-            $dbName = "micro";
+            $dbName = "microbio";
             $user = "root";
             $pass = "";
             $port = 3306;

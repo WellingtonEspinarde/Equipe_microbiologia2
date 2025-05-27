@@ -1,0 +1,15 @@
+/* 
+
+CREATE TABLE cadastro(
+    rgm INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    email VARCHAR(30) NOT NULL,
+    senha INT (20) NOT NULL,
+    sexo VARCHAR (50) NOT NULL,
+    represetante VARCHAR(50) NOT NULL
+    
+); 
+
+
+
+*/

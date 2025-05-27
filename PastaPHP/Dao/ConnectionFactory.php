@@ -1,7 +1,9 @@
 <?php
+
 class ConnectionFactory { // padrão singleton
     static $connection;
 
+    
     public static function getConnection() {
         if (!isset(self::$connection)) {
             $host = "localhost";
@@ -10,6 +12,7 @@ class ConnectionFactory { // padrão singleton
             $pass = "";
             $port = 3306;
 
+            
             try {
                 self::$connection = new PDO( "mysql:host=$host;dbname=$dbName;port=$port",$user,$pass);
                 self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -21,5 +24,28 @@ class ConnectionFactory { // padrão singleton
 
         return self::$connection;
     }
-}
+
+ }
+
+
+    
+            
+/*          TESTE !!
+            $host = "localhost";
+            $dbName = 'microbio';
+            $user = "root";
+            $pass = "";
+            $port = 3306;
+
+            $conexao = new mysqli($host,$user,$pass,$dbName);
+
+        if($conexao -> connect_errno){
+            echo "Erro";
+
+        }else{
+            echo "Conexão efetuada com sucesso";
+        }
+
+    */
+    
 ?>

@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
 </head>
 
 <body>
-           <!-- sem borde/ 
+    <!-- sem borde/ 
      <div class="conteiner p-4">
         <nav class="navbar" background-color:rgb 177, 238, 190 >
             <div class="container">
@@ -23,11 +23,10 @@
         <div class="row justify-content-center mt-4">
             <div class="col-md-5">
                 <div class="form">
+
                     <div class="card-header text-black text-center border-black">
                         <h3>Cadastro de Técnicos</h3>
-                        
                     </div>
-
 
                     <div class="card-body formulario-padrao">
                         <form action="#" method="POST">
@@ -42,48 +41,43 @@
                                 <input type="text" class="form-control" id="nome" name="nome" required>
                             </div>
 
-                           
                             <div class="mb-3">
                                 <label for="email" class="form-label">E-mail</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
 
                             <div class="mb-3">
-<<<<<<< Updated upstream
                                 <label for="senha" class="form-label">Senha</label>
                                 <input type="password" class="form-control" id="senha" name="senha" required>
                             </div>
-=======
-                                <label for="genero" class="form-check-label">Masculino</label>
-                                <input type="radio" class="form-check-input" name="genero" value="M">
-                                
-                              </div>
->>>>>>> Stashed changes
 
-                            
-                            <div class="mb-3">
-                                <label for="confirma_senha" class="form-label">Confirmar Senha</label>
-                                <input type="password" class="form-control" id="confirma_senha" name="confirma_senha" required>
-                            </div>
+                        <div class="mb-3">
+                                <h4>Gênero</h4> <!-- é necessario ??????-->
+                            <label for="genero" class="form-check-label">Masculino</label>
+                            <input type="radio" class="form-check-input" name="genero" value="M">
 
-                              <div class="mb-3">
-                                <input type="radio" class="form-check-input" name="Func" value="ALUN">
-                                <label for="ALUNO" class="form-check-label">Discente</label>
-                              </div>
+                            <label for="genero" class="form-check-label">Feminino</label>
+                            <input type="radio" class="form-check-input" name="genero" value="M">
+                        </div>
 
-                              <div class="mb-3">
-                                <input type="radio" class="form-check-input" name="Func" value="PROF">
-                                <label for="PROFESOR" class="form-check-label">Docente</label>
-                              </div>
+                    <div class="mb-3">
+                            <h4>Você é?</h4>
+                        <label for="ALUNO" class="form-check-label">Discente</label>
+                        <input type="radio" class="form-check-input" name="Func" value="ALUN">
 
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
-                            </div>
-        
-                        </form>
+                        <label for="PROFESOR" class="form-check-label">Docente</label>
+                        <input type="radio" class="form-check-input" name="Func" value="PROF">
                     </div>
-                
+
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    </div>
+
+                    </div>
+                    </form>
                 </div>
+
             </div>
         </div>
+    </div>
     </div>

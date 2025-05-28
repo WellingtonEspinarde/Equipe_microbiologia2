@@ -30,22 +30,9 @@ class ConnectionFactory { // padrão singleton
 
     
             
-/*          TESTE !!
-            $host = "localhost";
-            $dbName = 'microbio';
-            $user = "root";
-            $pass = "";
-            $port = 3306;
+//    TESTE !!
+            
 
-            $conexao = new mysqli($host,$user,$pass,$dbName);
-
-        if($conexao -> connect_errno){
-            echo "Erro";
-
-        }else{
-            echo "Conexão efetuada com sucesso";
-        }
-
-    */
+    
     
 ?>

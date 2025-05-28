@@ -52,12 +52,12 @@
                             </div>
 
                         <div class="mb-3">
-                                <h4>Gênero</h4> <!-- é necessario ??????-->
+                           <!--    <h4>Gênero</h4>  é necessario ??????
                             <label for="genero" class="form-check-label">Masculino</label>
                             <input type="radio" class="form-check-input" name="genero" value="M">
 
                             <label for="genero" class="form-check-label">Feminino</label>
-                            <input type="radio" class="form-check-input" name="genero" value="M">
+                            <input type="radio" class="form-check-input" name="genero" value="M">-->
                         </div>
 
                     <div class="mb-3">

@@ -2,20 +2,18 @@
     class Usuario {
         private $nome;
         private $id;
-        private $dataNascimento;
-        private $cpf;
+        private $rgm;
         private $email;
-        private $endereco;
+        private $senha;
 
 
-        public function __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco)
-        {
+        public function __construct($nome, $id, $rgm, $email, $senha){
+        
             $this-> nome = $nome;
             $this-> id = $id;
-            $this-> dataNascimento = $dataNascimento;
-            $this-> cpf = $cpf;
+            $this-> rgm = $rgm;
             $this-> email = $email;
-            $this-> endereco = $endereco;
+            $this-> senha = $senha;
         }
 
         public function getNome(){
@@ -34,20 +32,12 @@
             $this-> id = $id;
         }
 
-        public function getdataNascimento(){
-            return $this-> dataNascimento;
+        public function getRgm(){
+            return $this-> rgm;
         }
 
-        public function setdataNascimento($dataNascimento){
-            $this-> dataNascimento = $dataNascimento;
-        }
-
-        public function getCpf(){
-            return $this-> cpf;
-        }
-
-        public function setCpf($cpf){
-            $this-> cpf = $cpf;
+        public function setRgm($rgm){
+            $this-> rgm = $rgm;
         }
 
         public function getEmail(){
@@ -58,16 +48,18 @@
             $this-> email = $email;
         }
 
-        public function getEndereco(){
-            return $this-> endereco;
+         public function getSenha(){
+            return $this-> senha;
         }
 
-        public function setEndereco($endereco){
-            $this-> endereco = $endereco;
+        public function setSenha($senha){
+            $this-> senha = $senha;
         }
+
+
 
         public function __toString(){
-             return "Nome: {$this->nome} - Id: {$this->id} - Data de Nascimento: {$this->dataNascimento} - Cpf: {$this->cpf} - Email: {$this->email} - Endereço: {$this->endereco}";
+             return "Nome: {$this->nome} - Id: {$this->id} - Rgm: {$this->rgm} - Email: {$this->email}";
         }
 
     }

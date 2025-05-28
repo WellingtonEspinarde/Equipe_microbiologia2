@@ -24,23 +24,4 @@ class ConnectionFactory { // padrão singleton
     }
 
  }
-<<<<<<< HEAD
 
-
-    
-            
-//    TESTE !!!! tentando 
-            
-=======
-  
-/*          TESTE !!
-            $host = "localhost";
-            $dbName = 'microbio';
-            $user = "root";
-            $pass = "";
-            $port = 3306;
->>>>>>> 1a94a59191e7282b942cf2eae509b2dab81e7d0e
-
-    
-    
-?>

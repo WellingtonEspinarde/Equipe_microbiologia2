@@ -8,7 +8,7 @@ class UsuarioDao{
             $conn = ConnectionFactory::getConnection()->prepare($sql);
             $conn->bindValue(":nome", $usu->getNome());
             $conn->bindValue(":id", $usu->getId());
-            $conn->bindValue(":rgm", $usu->getRgm());
+            $conn->bindValue(":cpf", $usu->getCpf());
             $conn->bindValue(":email", $usu->getEmail());
             return $conn->execute(); # executa o insert
         }catch(PDOException $ex){

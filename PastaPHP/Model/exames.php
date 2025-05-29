@@ -1,6 +1,6 @@
 <?php 
-class Exames extends Usuario{ #vou mudar Herança nao existe aqui 
-
+class Exames extends Usuario{ #OBS: vou criar outra Classe, nao existe Herança aqui
+    
     // Atributos a rever com a Equipe se necessario com ??
     /*ENTIDADE EXAMES ->
 TIPOSDEEXAMES. 

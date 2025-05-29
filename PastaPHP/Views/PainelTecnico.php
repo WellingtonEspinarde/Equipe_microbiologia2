@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-light">
+<body style="background-color: rgb(177, 238, 190);">
 
   <div class="container py-5">
     <div class="text-center mb-5">

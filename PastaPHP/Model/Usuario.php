@@ -2,16 +2,16 @@
     class Usuario {
         private $nome;
         private $id;
-        private $rgm;
+        private $cpf;
         private $email;
         private $senha;
 
 
-        public function __construct($nome, $id, $rgm, $email, $senha){
+        public function __construct($nome, $id, $cpf, $email, $senha){
         
             $this-> nome = $nome;
             $this-> id = $id;
-            $this-> rgm = $rgm;
+            $this-> cpf = $cpf;
             $this-> email = $email;
             $this-> senha = $senha;
         }
@@ -32,12 +32,12 @@
             $this-> id = $id;
         }
 
-        public function getRgm(){
-            return $this-> rgm;
+        public function getCpf(){
+            return $this-> cpf;
         }
 
-        public function setRgm($rgm){
-            $this-> rgm = $rgm;
+        public function setCpf($cpf){
+            $this-> cpf = $cpf;
         }
 
         public function getEmail(){
@@ -56,10 +56,8 @@
             $this-> senha = $senha;
         }
 
-
-
         public function __toString(){
-             return "Nome: {$this->nome} - Id: {$this->id} - Rgm: {$this->rgm} - Email: {$this->email}";
+             return "Nome: {$this->nome} - Id: {$this->id} - Cpf: {$this->cpf} - Email: {$this->email}";
         }
 
     }

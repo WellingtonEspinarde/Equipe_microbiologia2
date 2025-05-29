@@ -1,23 +1,13 @@
 <?php
-    class Aluno extends Usuario {
-        private $matricula;
+    class Aluno extends Professor {
         private $curso;
         private $anoLetivo;
 
-        public function __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco, $matricula, $curso, $anoLetivo){
-            parent::__construct($nome, $id, $dataNascimento, $cpf, $email, $endereco);
-            $this->matricula = $matricula;
+        public function __construct($nome, $id, $cpf, $email, $senha, $rgm, $curso, $anoLetivo){
+            parent::__construct($nome, $id, $cpf, $email, $senha, $rgm);
             $this->curso = $curso;
             $this->anoLetivo = $anoLetivo;
         }     
-
-    public function getMatricula(){
-        return $this->matricula;
-    }
-    
-    public function setMatricula($matricula){
-        $this->matricula = $matricula; 
-    }
 
      public function getCurso(){
         return $this->curso;
@@ -37,7 +27,7 @@
 
    
       public function __toString(){
-        return parent::__toString(). "Matricula: {$this->matricula} - Curso: {$this->curso} - Ano Letivo: {$this->anoLetivo}";
+        return parent::__toString(). "Curso: {$this->curso} - Ano Letivo: {$this->anoLetivo}";
     }
 
     }

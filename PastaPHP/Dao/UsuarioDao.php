@@ -2,6 +2,7 @@
 class UsuarioDao{
 
     public function inserir(Usuario $usu){
+        
         try{
             $sql = "INSERT INTO usuario (nome, id, cpf, email, endereco)
                 VALUES (:nome, :id, :datanascimento, :cpf, :email, :endereco)";

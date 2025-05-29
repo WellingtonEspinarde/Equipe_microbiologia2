@@ -2,15 +2,15 @@
 class Paciente extends Usuario{ 
     private $exames;
     private $resultados;
-    private $historicoMecido;
+    private $historicoMedico;
     private $alunoResponsavel; 
 
-    public function __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco, $exames, $resultados,$historicoMecido,$alunoResponsavel){
+    public function __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco, $exames, $resultados,$historicoMedico,$alunoResponsavel){
       parent:: __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco);
 
       $this->exames = $exames;  
       $this->resultados = $resultados;
-      $this->historicoMecido = $historicoMecido;
+      $this->historicoMedico = $historicoMedico;
       $this->alunoResponsavel = $alunoResponsavel;
    }
 
@@ -32,11 +32,11 @@ class Paciente extends Usuario{
 
     
     public function getHistoricoMecido(){
-        return $this->historicoMecido;
+        return $this->historicoMedico;
     }
     
-    public function setHistoricoMecido($historicoMecido){
-        $this->historicoMecido = $historicoMecido; 
+    public function setHistoricoMecido($historicoMedico){
+        $this->historicoMedico = $historicoMedico; 
     }
   
     public function getAlunoResponsavel(){
@@ -48,7 +48,7 @@ class Paciente extends Usuario{
     }
 
     public function __toString(){
-        return parent::__toString(). "Exame: {$this->exames} - Resultado: {$this->resultados} - Historico Medico: {$this->historicoMecido} - Aluno Responsavel: {$this->alunoResponsavel}";
+        return parent::__toString(). "Exame: {$this->exames} - Resultado: {$this->resultados} - Historico Medico: {$this->historicoMedico} - Aluno Responsavel: {$this->alunoResponsavel}";
     }
 
   }

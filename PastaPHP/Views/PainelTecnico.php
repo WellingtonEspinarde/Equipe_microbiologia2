@@ -21,7 +21,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">Cadastrar Paciente</h5>
             <p class="card-text">Adicione um novo paciente ao sistema.</p>
-            <a href="cadastrar_paciente.php" class="btn btn-primary w-100">Acessar</a>
+            <a href="CadastroPaciente.php" class="btn btn-primary w-100">Acessar</a>
           </div>
         </div>
       </div>
@@ -32,7 +32,7 @@
           <div class="card-body text-center">
             <h5 class="card-title">Cadastrar Exame</h5>
             <p class="card-text">Registre um novo exame realizado.</p>
-            <a href="cadastrar_exame.php" class="btn btn-success w-100">Acessar</a>
+            <a href="CadastroExames.php" class="btn btn-success w-100">Acessar</a>
           </div>
         </div>
       </div>

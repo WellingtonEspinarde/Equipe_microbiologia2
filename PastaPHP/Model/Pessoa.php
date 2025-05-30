@@ -1,19 +1,14 @@
 <?php
-    class Usuario {
+    class Pessoa {
         private $nome;
         private $id;
         private $cpf;
-        private $email;
-        private $senha;
-
-
-        public function __construct($nome, $id, $cpf, $email, $senha){
+        
+        public function __construct($nome, $id, $cpf){
         
             $this-> nome = $nome;
             $this-> id = $id;
             $this-> cpf = $cpf;
-            $this-> email = $email;
-            $this-> senha = $senha;
         }
 
         public function getNome(){
@@ -40,24 +35,8 @@
             $this-> cpf = $cpf;
         }
 
-        public function getEmail(){
-            return $this-> email;
-        }
-
-        public function setEmail($email){
-            $this-> email = $email;
-        }
-
-         public function getSenha(){
-            return $this-> senha;
-        }
-
-        public function setSenha($senha){
-            $this-> senha = $senha;
-        }
-
         public function __toString(){
-             return "Nome: {$this->nome} - Id: {$this->id} - Cpf: {$this->cpf} - Email: {$this->email}";
+             return "Nome: {$this->nome} - Id: {$this->id} - Cpf: {$this->cpf}";
         }
 
     }

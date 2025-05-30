@@ -41,9 +41,9 @@
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <div class="card-body text-center">
-            <h5 class="card-title">Ver Exames</h5>
-            <p class="card-text">Consulte exames já cadastrados.</p>
-            <a href="ver_exames.php" class="btn btn-warning w-100">Acessar</a>
+            <h5 class="card-title">Buscar Paciente por ID</h5>
+            <p class="card-text">Consulte paciente já cadastrados.</p>
+            <a href="BuscarPaciente.php" class="btn btn-warning w-100">Acessar</a>
           </div>
         </div>
       </div>

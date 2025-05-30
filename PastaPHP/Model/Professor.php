@@ -1,23 +1,33 @@
 <?php
-class Professor extends Usuario {
-    private $rgm;
+class Professor extends Pessoa {
+    private $email; 
+    private $senha;
 
-    public function __construct($nome, $id, $cpf, $email, $senha, $rgm){
-        parent:: __construct($nome, $id, $cpf, $email, $senha);
-        $this->rgm = $rgm;
+    public function __construct($nome, $id, $cpf, $email, $senha){
+        parent:: __construct($nome, $id, $cpf);
+        $this->email = $email;
+        $this->senha = $senha;
     
         }
     
-        public function getRgm(){
-        return $this-> rgm;
+        public function getEmail(){
+        return $this-> email;
         }
     
-        public function setNumeroIdentificador($rgm){
-        $this-> rgm = $rgm; 
+        public function setEmail($email){
+        $this-> email = $email; 
+        }
+
+        public function getSenha(){
+        return $this-> senha;
+        }
+    
+        public function setSenha($senha){
+        $this-> senha = $senha; 
         }
 
         public function __toString() {
-        return  parent::__toString() . " - Rgm: {$this->rgm}";
+        return  parent::__toString() . " Email: {$this->email} - Senha: {$this->senha}";
     }
 
     }

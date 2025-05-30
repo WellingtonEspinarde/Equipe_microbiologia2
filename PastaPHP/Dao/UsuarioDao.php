@@ -1,16 +1,15 @@
 <?php
 class UsuarioDao{
 
-    public function inserir(Usuario $usu){
+    public function inserir(Pessoa $usu){
         
         try{
-            $sql = "INSERT INTO usuario (nome, id, cpf, email, endereco)
-                VALUES (:nome, :id, :datanascimento, :cpf, :email, :endereco)";
+            $sql = "INSERT INTO usuario (nome, id, cpf)
+                VALUES (:nome, :id, :cpf)";
             $conn = ConnectionFactory::getConnection()->prepare($sql);
             $conn->bindValue(":nome", $usu->getNome());
             $conn->bindValue(":id", $usu->getId());
             $conn->bindValue(":cpf", $usu->getCpf());
-            $conn->bindValue(":email", $usu->getEmail());
             return $conn->execute(); # executa o insert
         }catch(PDOException $ex){
             echo "<p> Erro </p> <p> $ex </p>";

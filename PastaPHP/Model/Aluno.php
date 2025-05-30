@@ -1,10 +1,10 @@
 <?php
-    class Aluno extends Professor {  #extende usuario + rgm
+    class Aluno extends Professor {  #extende pessoa + rgm
         private $curso;
         private $anoLetivo;
 
-        public function __construct($nome, $id, $cpf, $email, $senha, $rgm, $curso, $anoLetivo){
-            parent::__construct($nome, $id, $cpf, $email, $senha, $rgm);
+        public function __construct($nome, $id, $cpf, $email, $senha, $curso, $anoLetivo){
+            parent::__construct($nome, $id, $cpf, $email, $senha);
             $this->curso = $curso;
             $this->anoLetivo = $anoLetivo;
         }     

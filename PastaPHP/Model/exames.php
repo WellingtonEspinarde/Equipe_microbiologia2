@@ -1,34 +1,50 @@
 <?php 
-class Exames extends Usuario{ #OBS: vou criar outra Classe, nao existe Herança aqui
-    
-    // Atributos a rever com a Equipe se necessario com ??
-    /*ENTIDADE EXAMES ->
-TIPOSDEEXAMES. 
-NOME. ok
-DESCRIÇÃO. ok
-TIPOAMOSTRA. ok
-RESULTADO. ok
-IDALUNO.??
-VALORREFERENCIA. ??
-UNIDADEMEDIDA. ??
-PRIORIDADE. ok
-ESTÁEMJEJUMOUNÃO. */
-
+class Exames {
+    private $id;
+    private $idUsuario; #chave extrangeira
+    private $idPaciente; #chave extrangeira
     private $nomeExame;
     private $descricao;
     private $tipoAmostra;
     private $resultado;
     private $prioridade;
 
-    public function __construct($nome, $id, $dataNascimento, $cpf, $email, $endereco, $nomeExame, $descricao, $tipoAmostra, $resultado, $prioridade  ){
-            parent::__construct($nome, $id, $dataNascimento, $cpf, $email, $endereco);
-            $this->nomeExame = $nomeExame;
-            $this->descricao = $descricao;
-            $this->tipoAmostra = $tipoAmostra;
-            $this->resultado = $resultado;
-            $this->prioridade = $prioridade;
-        }    
+    public function __construct($id, $idUsuario, $idPaciente, $nomeExame, $descricao, $tipoAmostra, $resultado, $prioridade){
+        $this->id = $id;
+        $this->idUsuario = $idUsuario;
+        $this->idPaciente = $idPaciente;
+        $this->nomeExame = $nomeExame;
+        $this->descricao = $descricao;
+        $this->tipoAmostra = $tipoAmostra;
+        $this->resultado = $resultado;
+        $this->prioridade = $prioridade;
 
+    }
+
+    public function getId(){
+        return $this->id;
+    }
+    
+    public function setId($id){
+        $this->id = $id; 
+    }
+
+    public function getIdUsuario(){
+        return $this->idUsuario;
+    }
+    
+    public function setIdUsuario($idUsuario){
+        $this->idUsuario = $idUsuario; 
+    }
+
+    public function getIdPaciente(){
+        return $this->idPaciente;
+    }
+    
+    public function setIdPaciente($idPaciente){
+        $this->idPaciente = $idPaciente; 
+    }
+    
      public function getNomeExame(){
         return $this->nomeExame;
     }
@@ -69,9 +85,10 @@ ESTÁEMJEJUMOUNÃO. */
         $this->prioridade = $prioridade; 
     }
 
-     public function __toString(){
-        return parent::__toString(). "Nome do Exame: {$this->nomeExame} - Descrição: {$this->descricao} - Tipo da Amostra: {$this->tipoAmostra} - Resultado: {$this->resultado} - Prioridade: {$this->prioridade} ";
-    }
+    
+        public function __toString(){
+             return "Id Exame: {$this->id} - Id Usuário: {$this->idUsuario} - Id Paciente: {$this->idPaciente} - Nome do Exame: {$this->nomeExame} - Descrição: {$this->descricao} - Tipo da Amostra: {$this->tipoAmostra} - Resultado: {$this->resultado} - Prioridade: {$this->prioridade}";
+        }
 
  }
 ?>

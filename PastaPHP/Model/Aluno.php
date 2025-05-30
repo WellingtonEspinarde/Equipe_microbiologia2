@@ -1,5 +1,5 @@
 <?php
-    class Aluno extends Professor {
+    class Aluno extends Professor {  #extende usuario + rgm
         private $curso;
         private $anoLetivo;
 

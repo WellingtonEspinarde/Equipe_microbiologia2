@@ -1,6 +1,6 @@
 <?php
 
-class ConnectionFactory { // padrão singleton  
+ class ConnectionFactory { // padrão singleton  
     static $connection;
 
     public static function getConnection() {
@@ -21,7 +21,39 @@ class ConnectionFactory { // padrão singleton
         }
 
         return self::$connection;
-    }
+    } 
 
  }
 
+
+
+ /* class ConnectionFactory{
+    static $connection;
+
+    public static function getConnection(){
+        if(!isset($connection)){
+
+            $port = 3306;         // porta do SGBD
+            $dbName = "micr"; // Nome do banco de dados
+            $user = "root";     // usuário do banco
+            $host = "localhost";  // local de hospedagem do SGBD
+            $pass = "";
+
+            try{
+
+                $connection = new PDO("mysql:host=$host;dbname=$dbName;port=$port",$user, $pass);
+                echo "Conectado com sucesso !!";
+                return $connection;
+
+            }catch(PDOException $ex){
+
+                echo "Error para conectar com o banco de dados" . $ex->getMessage();
+            }
+        }
+
+        return $connection;
+
+    }
+ }
+    */
+?>

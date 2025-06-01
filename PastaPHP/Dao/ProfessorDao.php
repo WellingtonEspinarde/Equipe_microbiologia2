@@ -12,8 +12,6 @@ class ProfessorDao{
                 $conn->bindValue(":id", $professor->getId());
                 $conn->bindValue(":rgm", $professor->getRgm());
                 $conn->bindValue(":email", $professor->getEmail());
-
-                $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
                 $conn->bindValue(":senha", $professor ->getSenha());
 
                 return $conn ->execute();

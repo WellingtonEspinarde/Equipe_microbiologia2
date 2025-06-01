@@ -7,18 +7,15 @@ class ProfessorDao{
         try{
              $sql = "INSERT INTO professor (nome,id,rgm,email,senha) VALUES (:nome,:id,:rgm,:email,:senha)";
 
-                $conn = ConnectionFactory::getConnection()->prepare($sql); 
-                $conn->bindValue(":nome", $professor->getNome());
-                $conn->bindValue(":id", $professor->getId());
-                $conn->bindValue(":rgm", $professor->getRgm());
-<<<<<<< Updated upstream
-                $conn->bindValue(":email", $professor->getEmail());
-=======
-                $conn->bindValue(":email", $professor->getEmail());   
->>>>>>> Stashed changes
-                $conn->bindValue(":senha", $professor ->getSenha());
+                $connect = ConnectionFactory::getConnection()->prepare($sql); 
+                $connect->bindValue(":nome", $professor->getNome());
+                $connect->bindValue(":id", $professor->getId());
+                $connect->bindValue(":rgm", $professor->getRgm());
+                $connect->bindValue(":email", $professor->getEmail());
+                $connect->bindValue(":email", $professor->getEmail());   
+                $connect->bindValue(":senha", $professor ->getSenha());
 
-                return $conn ->execute();
+                return $connect ->execute();
 
 
         }catch(PDOException $ex){

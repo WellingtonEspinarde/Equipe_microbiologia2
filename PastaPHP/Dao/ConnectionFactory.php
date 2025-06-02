@@ -29,7 +29,7 @@
 
 
 
- /* class ConnectionFactory{
+ /* class ConnectionFactory{    
     static $connection;
 
     public static function getConnection(){

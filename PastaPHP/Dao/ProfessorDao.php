@@ -26,19 +26,15 @@ class ProfessorDao{
      }
 
 
-
-
-
-
      public function SelectId($id){
 
         try{
             $sql = "SELECT * FROM professor WHERE id = :id";
-            $connect = ConnectionFactory::getConnection()->prepare($sql); 
-            $connect->bindValue(":id",$id);
+            $connect = ConnectionFactory::getConnection()->query($sql); 
+            $connect->bindValue(":id",$id); // fetch
             $connect ->execute();
 
-            return $connect->fetch(PDO::FETCH_ASSOC)
+            return $connect->fetch(PDO::FETCH_ASSOC);
 
 
         }catch(PDOException $ex){

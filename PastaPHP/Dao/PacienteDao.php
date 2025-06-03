@@ -8,7 +8,7 @@ class PacienteDao{
                 VALUES (:nome, :cpf, :exame, :resultado, :historicomedico, :alunoresponsavel)"; #id retirado
             $conn = ConnectionFactory::getConnection()->prepare($sql);
             $conn->bindValue(":nome", $paci->getNome());
-         #  $conn->bindValue(":id", $paci->getId());         talvez nao seja necessario é auto increment no banco
+           #$conn->bindValue(":id", $paci->getId());         talvez nao seja necessario é auto increment no banco
             $conn->bindValue(":cpf", $paci->getCpf());
             $conn->bindValue(":exame", $paci->getExames());
             $conn->bindValue(":resultado", $paci->getResultados());

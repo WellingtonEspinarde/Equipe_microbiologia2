@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="Container">
+    <div class="container">
         <div class="row justify-content-center mt-4">
             <div class="col-md-5">
                 <div class="form">

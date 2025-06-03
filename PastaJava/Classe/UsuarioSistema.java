@@ -1,4 +1,4 @@
-public abstract class UsuarioSistema extends Pessoa {
+public abstract class UsuarioSistema extends Pessoa { //
     private String email;
     private String senha;
 

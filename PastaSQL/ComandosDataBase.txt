@@ -1,13 +1,28 @@
-CREATE TABLE cadastro(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    rgm BIGINT UNSIGNED NOT NULL,
-    nome VARCHAR(50) NOT NULL,
-    email VARCHAR(30) NOT NULL,
-    senha INT (20) NOT NULL,
-    sexo VARCHAR (50) NOT NULL,
-    represetante VARCHAR(50) NOT NULL
-    
-); 
+
+CREATE TABLE paciente (
+    id INT AUTO_INCREMENT PRIMARY KEY, -- Chave primária autoincrementada
+    exames TEXT NOT NULL, -- Armazena detalhes dos exames
+    resultados TEXT NOT NULL, -- Guarda os resultados dos exames
+    historicoMedico TEXT NOT NULL, -- Informações médicas do paciente
+    alunoResponsavel VARCHAR(100) NOT NULL -- Nome do aluno responsável pelo exame
+);
+CREATE TABLE Pessoa (
+    id INT AUTO_INCREMENT PRIMARY KEY,  -- Chave primária autoincrementada
+    nome VARCHAR(100) NOT NULL,  -- Nome da pessoa (limitado a 100 caracteres)
+    cpf VARCHAR(14) UNIQUE NOT NULL  -- CPF único e obrigatório (formato: 000.000.000-00)
+);
+CREATE TABLE Exames (
+    id SERIAL PRIMARY KEY,
+    nomeExame VARCHAR(100) NOT NULL,
+    descricao VARCHAR(255) NOT NULL,
+    tipoAmostra VARCHAR(100) NOT NULL,
+    resultado VARCHAR(100) NOT NULL,
+    prioridade INTEGER NOT NULL,
+    idPaciente INT NOT NULL,
+    idPessoa INT NOT NULL,
+    FOREIGN KEY (idPaciente) REFERENCES PACIENTE(id),
+    FOREIGN KEY (idPessoa) REFERENCES PESSOA(id)   
+);
 
 
 

@@ -1,4 +1,8 @@
 <?php 
+
+    
+    require_once __DIR__ . '/../dao/ExamesDao.php';
+
 class Exames {
     private $id;
     private $idUsuario; #chave extrangeira

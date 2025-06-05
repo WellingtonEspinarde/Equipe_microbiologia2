@@ -1,10 +1,10 @@
 <?php
 
-require_once '../dao/ConnectionFactory.php';
-require_once '../dao/ExamesDao.php';
-require_once '../model/Exames.php';
-$exame = new Exames();
-$examesDao = new ExamesDao();
+include '../dao/ConnectionFactory.php';
+include __DIR__. '/../dao/ExamesDao.php';
+include __DIR__. '/../model/Exames.php';
+//$exame = new Exames();
+//$examesDao = new ExamesDao();
 if (isset($_POST['cadastrar'])) {
     $exame->setIdUsuario($_POST['idUsuario']);
     $exame->setIdPaciente($_POST['idPaciente']);
@@ -13,14 +13,16 @@ if (isset($_POST['cadastrar'])) {
     $exame->setTipoAmostra($_POST['tipoAmostra']);
     $exame->setResultado($_POST['resultado']);
     $exame->setPrioridade($_POST['prioridade']);
+    $professorDao->inserir($exame);
+    header("Location: ../index.php");
 
-    if ($examesDao->inserir($exame)) {
+    /*if ($examesDao->inserir($exame)) {
         header("Location: ../index.php");
     } else {
         echo "Erro ao cadastrar exame.";
-    }
+    }*/
 }
-if (isset($_GET['listar'])) {
+/*if (isset($_GET['listar'])) {
     $exames = $examesDao->listarTodos();
     if ($exames) {
         foreach ($exames as $ex) {
@@ -36,5 +38,8 @@ if (isset($_GET['listar'])) {
     } else {
         echo "Nenhum exame encontrado.";
     }
-    
+
+}*/
+if($_SERVER["REQUEST_METHOD"]== "GET"){
+    ConnectionFactory::getConnection();
 }

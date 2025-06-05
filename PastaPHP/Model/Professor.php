@@ -1,4 +1,7 @@
 <?php
+
+require_once __DIR__. "/Pessoa.php";
+
 class Professor extends Pessoa { #idade
     private $email; 
     private $senha;

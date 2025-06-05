@@ -11,7 +11,6 @@ class ProfessorDao{
                 $connect->bindValue(":nome", $professor->getNome());
                 $connect->bindValue(":id", $professor->getId());
                 $connect->bindValue(":rgm", $professor->getRgm());
-                $connect->bindValue(":email", $professor->getEmail());
                 $connect->bindValue(":email", $professor->getEmail());   
                 $connect->bindValue(":senha", $professor ->getSenha());
 
@@ -44,7 +43,7 @@ class ProfessorDao{
 
 
 
-
+/*
 
 
      public function update(Professor $professor){
@@ -92,6 +91,7 @@ class ProfessorDao{
         }
 
      }
+*/
 
   }
 

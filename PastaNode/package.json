@@ -1,0 +1,25 @@
+{
+  "name": "equipe_microbiologia2",
+  "version": "1.0.0",
+  "description": "Minha pasta do Projeto",
+  "homepage": "https://github.com/WellingtonEspinarde/Equipe_microbiologia2#readme",
+  "bugs": {
+    "url": "https://github.com/WellingtonEspinarde/Equipe_microbiologia2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WellingtonEspinarde/Equipe_microbiologia2.git"
+  },
+  "license": "ISC",
+  "author": "Juaum",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}

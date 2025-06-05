@@ -4,8 +4,8 @@
     <form action="#" method="POST">
 
         <div class="mb-3">
-            <label for="rgm" class="form-label">RGM</label>
-            <input type="text" class="form-control" id="rgm" name="rgm" required>
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="CPF" name="cpf" required>
         </div>
 
         <div class="mb-3">
@@ -42,7 +42,7 @@
         </div>
 
         <div class="d-grid">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">cadastrar</button>
         </div>
 
 </div>

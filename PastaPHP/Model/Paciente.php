@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__. "/Pessoa.php";
 class Paciente extends Pessoa{  #rever atributos que falta 
     private $exames;
     private $resultados;

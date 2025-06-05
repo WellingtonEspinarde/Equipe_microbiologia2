@@ -1,7 +1,7 @@
 
 
 <div class="card-body formulario-padrao">
-    <form action="" method="POST">
+    <form action="../Controller/ProfessorController.php" method="POST">
 
         <div class="mb-3">
             <label for="cpf" class="form-label">CPF</label>

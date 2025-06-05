@@ -18,9 +18,12 @@ if(isset($_POST['cadastrar'])){
     header("Location: ../index.php");
 }
 
+<<<<<<< Updated upstream
 if($_SERVER["REQUEST_METHOD"]== "GET"){
     ConnectionFactory::getConnection();
 }
+=======
+>>>>>>> Stashed changes
 ?>
 
 

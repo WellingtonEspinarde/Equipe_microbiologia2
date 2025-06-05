@@ -22,6 +22,24 @@ class PacienteDao{
     }
 
 
+    
+     public function SelectId($id){
+
+        try{
+            $sql = "SELECT * FROM paciente WHERE id = :id";
+            $connect = ConnectionFactory::getConnection()->query($sql); 
+            $connect->bindValue(":id",$id); // fetch
+            $connect ->execute();
+
+            return $connect->fetch(PDO::FETCH_ASSOC);
+
+
+        }catch(PDOException $ex){
+             echo "<p> Error: "  . $ex->getMessage() . "<p>";
+        }
+     }
+
+
 
 }
 ?>

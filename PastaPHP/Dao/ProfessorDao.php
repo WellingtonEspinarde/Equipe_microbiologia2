@@ -9,8 +9,7 @@ class ProfessorDao{
 
                 $connect = ConnectionFactory::getConnection()->prepare($sql); 
                 $connect->bindValue(":nome", $professor->getNome());
-                $connect->bindValue(":id", $professor->getId());
-                $connect->bindValue(":rgm", $professor->getRgm());
+                $connect->bindValue(":cpf", $professor->getCpf());
                 $connect->bindValue(":email", $professor->getEmail());   
                 $connect->bindValue(":senha", $professor ->getSenha());
 

@@ -18,7 +18,7 @@
                 </div>
                 
                 <div class="card-body formulario-padrao">
-                    <form action="#" method="post">
+                    <form action="../Controller/ExamesController.php" method="post">
 
                     <div class="mb-3">
                         <label for="inome" class="form-label">Nome Completo</label>

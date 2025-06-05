@@ -1,3 +1,4 @@
+
 public class Aluno extends UsuarioSistema {
     private String curso;
     private String anoLetivo;

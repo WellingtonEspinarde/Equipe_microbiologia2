@@ -1,16 +1,20 @@
 
-CREATE TABLE paciente (
-    id INT AUTO_INCREMENT PRIMARY KEY, -- Chave primária autoincrementada
-    exames TEXT NOT NULL, -- Armazena detalhes dos exames
-    resultados TEXT NOT NULL, -- Guarda os resultados dos exames
-    historicoMedico TEXT NOT NULL, -- Informações médicas do paciente
-    alunoResponsavel VARCHAR(100) NOT NULL -- Nome do aluno responsável pelo exame
-);
+CREATE DATABASE micro;
+
 CREATE TABLE Pessoa (
-    id INT AUTO_INCREMENT PRIMARY KEY,  -- Chave primária autoincrementada
-    nome VARCHAR(100) NOT NULL,  -- Nome da pessoa (limitado a 100 caracteres)
-    cpf VARCHAR(14) UNIQUE NOT NULL  -- CPF único e obrigatório (formato: 000.000.000-00)
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    nome VARCHAR(100) NOT NULL,  
+    cpf VARCHAR(14) UNIQUE NOT NULL  
 );
+
+CREATE TABLE paciente (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    exame VARCHAR(100) NOT NULL,
+    resultado VARCHAR(100) NOT NULL,
+    historicoMedico TEXT NOT NULL,
+    alunoResponsavel VARCHAR (255) NOT NULL
+);
+
 CREATE TABLE Exames (
     id SERIAL PRIMARY KEY,
     nomeExame VARCHAR(100) NOT NULL,
@@ -26,6 +30,7 @@ CREATE TABLE Exames (
 
 
 
+<<<<<<< HEAD
 CREATE TABLE professor (
     id INT PRIMARY KEY,
     idPessoa INT NOT NULL,
@@ -34,5 +39,8 @@ CREATE TABLE professor (
     FOREIGN KEY (idPessoa) REFERENCES pessoa(id)
 
 );
+=======
+
+>>>>>>> 05277c9ff0114c093aff3e89cb6377cf38db5d35
 
 

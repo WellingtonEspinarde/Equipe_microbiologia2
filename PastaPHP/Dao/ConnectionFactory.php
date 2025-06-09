@@ -11,7 +11,7 @@
             $dbName = 'micro';
             $user = "root";
             $pass = "";
-            $port = 3306;
+            $port = 3307;
 
             try {
                 self::$connection = new PDO( "mysql:host=$host;dbname=$dbName;port=$port",$user,$pass);

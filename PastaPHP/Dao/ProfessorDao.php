@@ -42,7 +42,7 @@ class ProfessorDao{
 
 
 
-/*
+
 
 
      public function update(Professor $professor){
@@ -76,7 +76,6 @@ class ProfessorDao{
      public function delete($id){
 
         try{
-
             $sql = "DELETE FROM professor WHERE id = :id";
             $connect = ConnectionFactory::getConnection()->prepare($sql); 
             $connect->bindValue("i:d",$id);
@@ -86,11 +85,10 @@ class ProfessorDao{
         }catch(PDOException $ex){
             
             echo "<p> Error: "  . $ex->getMessage() . "<p>";
-
         }
 
      }
-*/
+
 
   }
 

@@ -1,4 +1,8 @@
 <?php
+
+require_once __DIR__. "/Professor.php";
+
+
     class Aluno extends Professor {  #extende pessoa + rgm
         private $curso;
         private $anoLetivo;

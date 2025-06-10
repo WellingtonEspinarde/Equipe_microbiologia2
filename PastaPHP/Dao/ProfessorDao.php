@@ -3,9 +3,16 @@
 class ProfessorDao{
 
 
-    public function insert(Professor $professor){
+    /*
+
+    Mudar os atributos da INSETIR PROFESSOR DE ACORDO COM O BANCO DE DADOS
+
+
+    */
+
+    public function inserir(Professor $professor){
         try{
-             $sql = "INSERT INTO professor (nome,id,rgm,email,senha) VALUES (:nome,:id,:rgm,:email,:senha)";
+             $sql = "INSERT INTO professor (nome,id,email,senha) VALUES (:nome,:id,:rgm,:email,:senha)";
 
                 $connect = ConnectionFactory::getConnection()->prepare($sql); 
                 $connect->bindValue(":nome", $professor->getNome());
@@ -21,29 +28,16 @@ class ProfessorDao{
             echo "<p> Error: "  . $ex->getMessage() . "<p>";
         }
 
-     }
+   }
+
+     
 
 
-     public function SelectId($id){
-
-        try{
-            $sql = "SELECT * FROM professor WHERE id = :id";
-            $connect = ConnectionFactory::getConnection()->query($sql); 
-            $connect->bindValue(":id",$id); // fetch
-            $connect ->execute();
-
-            return $connect->fetch(PDO::FETCH_ASSOC);
+      
+            //return $connect->fetch(PDO::FETCH_ASSOC);
 
 
-        }catch(PDOException $ex){
-             echo "<p> Error: "  . $ex->getMessage() . "<p>";
-        }
-     }
-
-
-
-
-
+    
 
      public function update(Professor $professor){
 

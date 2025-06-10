@@ -1,7 +1,7 @@
 
 
 <div class="card-body formulario-padrao">
-    <form action="../Controller/ProfessorController.php" method="POST">
+    <form action="../Controller/ProfessorController.php" method="post">
 
         <div class="mb-3">
             <label for="cpf" class="form-label">CPF</label>
@@ -42,7 +42,7 @@
         </div>
 
         <div class="d-grid">
-            <button type="submit" class="btn btn-primary">cadastrar</button>
+            <input type="submit" name="cadastrar" value="cadastrar" class="btn btn-primary">
         </div>
 
 </div>

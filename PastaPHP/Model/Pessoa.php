@@ -4,12 +4,18 @@
         private $id;
         private $cpf;
         
-        public function __construct($nome, $id, $cpf){
+
+        
+
+        public function Pessoa(){}
+
+
+        /*public function __construct($nome, $id, $cpf){
         
             $this-> nome = $nome;
             $this-> id = $id;
             $this-> cpf = $cpf;
-        }
+        }*/
 
         public function getNome(){
             return $this-> nome;

@@ -6,12 +6,23 @@ class Professor extends Pessoa { #idade
     private $email; 
     private $senha;
 
-    public function __construct($nome, $id, $cpf, $email, $senha){
-        parent:: __construct($nome, $id, $cpf);
+    /*public function __construct($nome, $id, $cpf, $email, $senha){
+        parent::__construct($nome, $id, $cpf);
         $this->email = $email;
         $this->senha = $senha;
     
+        }*/
+
+
+        public function professor(){
+            parent:: __contruct();
         }
+
+        /*public function __construct($nome, $id, $cpf, $email, $senha) {
+            parent::__construct($nome, $id, $cpf);
+            $this->email = $email;
+            $this->senha = $senha;
+        }*/
     
         public function getEmail(){
         return $this-> email;

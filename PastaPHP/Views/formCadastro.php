@@ -42,7 +42,11 @@
         </div>
 
         <div class="d-grid">
+<<<<<<< HEAD
             <input type="submit" name="cadastrar" value="cadastrar" class="btn btn-primary">
+=======
+            <input type="submit" class="btn btn-primary" value="cadastrar">
+>>>>>>> c665bc97b6c8cfa4c61cc0029beb7c17b1dbf13b
         </div>
 
 </div>

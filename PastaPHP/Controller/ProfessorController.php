@@ -8,6 +8,11 @@ $professor = new Professor();
 $professorDao = new ProfessorDao;
 
 
+<<<<<<< HEAD
+=======
+$professor = new Professor();
+$professorDao = new ProfessorDao;
+>>>>>>> c665bc97b6c8cfa4c61cc0029beb7c17b1dbf13b
 
 if(isset($_POST['cadastrar'])){
     $professor->setNome($_POST['nome']);

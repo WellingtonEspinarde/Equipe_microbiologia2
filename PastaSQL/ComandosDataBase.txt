@@ -28,6 +28,9 @@ CREATE TABLE Exames (
     FOREIGN KEY (idPessoa) REFERENCES PESSOA(id)   
 );
 
+
+
+<<<<<<< HEAD
 CREATE TABLE professor (
     id INT PRIMARY KEY,
     idPessoa INT NOT NULL,
@@ -36,5 +39,7 @@ CREATE TABLE professor (
     FOREIGN KEY (idPessoa) REFERENCES pessoa(id)
 
 );
+
+
 
 

@@ -5,7 +5,7 @@ class ProfessorDao{
 
     public function insert(Professor $professor){
         try{
-             $sql = "INSERT INTO professor (nome,id,rgm,email,senha) VALUES (:nome,:id,:rgm,:email,:senha)";
+             $sql = "INSERT INTO professor (nome,cpf,email,senha) VALUES (:nome,:cpf,:email,:senha)";
 
                 $connect = ConnectionFactory::getConnection()->prepare($sql); 
                 $connect->bindValue(":nome", $professor->getNome());

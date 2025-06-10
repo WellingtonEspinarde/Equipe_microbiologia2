@@ -3,22 +3,14 @@
 class ProfessorDao{
 
 
-    /*
+  
 
-    Mudar os atributos da INSETIR PROFESSOR DE ACORDO COM O BANCO DE DADOS
-
-
-    */
-
-    public function inserir(Professor $professor){
+    public function insert(Professor $professor){
         try{
-<<<<<<< HEAD
-             $sql = "INSERT INTO professor (nome,id,email,senha) VALUES (:nome,:id,:rgm,:email,:senha)";
-=======
-             $sql = "INSERT INTO professor (nome,cpf,email,senha) VALUES (:nome,:cpf,:email,:senha)";
->>>>>>> c665bc97b6c8cfa4c61cc0029beb7c17b1dbf13b
+             $sql = "INSERT INTO professor (nome,cpf,email,senha) 
+                VALUES (:nome,:cpf,:email,:senha)";
 
-                $connect = ConnectionFactory::getConnection()->prepare($sql); 
+                $connect  = ConnectionFactory::getConnection()->prepare($sql); 
                 $connect->bindValue(":nome", $professor->getNome());
                 $connect->bindValue(":cpf", $professor->getCpf());
                 $connect->bindValue(":email", $professor->getEmail());   
@@ -29,20 +21,12 @@ class ProfessorDao{
 
         }catch(PDOException $ex){
 
-            echo "<p> Error: "  . $ex->getMessage() . "<p>";
+            echo "<p> Error: "  . ($ex->getMessage()) . "<p>";
+          
         }
 
    }
-
-     
-
-
-      
-            //return $connect->fetch(PDO::FETCH_ASSOC);
-
-
-    
-
+/*
      public function update(Professor $professor){
 
         try{
@@ -65,12 +49,6 @@ class ProfessorDao{
         }
 
      }
-
-
-
-
-     
-
      public function delete($id){
 
         try{
@@ -86,8 +64,7 @@ class ProfessorDao{
         }
 
      }
-
-
+        */
   }
 
 

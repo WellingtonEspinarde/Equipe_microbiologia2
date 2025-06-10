@@ -7,11 +7,11 @@
 
     public static function getConnection() {
         if (!isset(self::$connection)) {
-            $host = "localhost";
+            $host = 'localhost';
             $dbName = 'micro';
-            $user = "root";
-            $pass = "";
-            $port = 3306;
+            $user = 'root';
+            $pass = '';
+            $port = 3307;
 
             try {
                 self::$connection = new PDO( "mysql:host=$host;dbname=$dbName;port=$port",$user,$pass);

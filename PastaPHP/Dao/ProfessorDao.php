@@ -1,15 +1,13 @@
 <?php
 
-
-
 class ProfessorDao{
 
-    public function insert(Professor $professor){
-        try{
-             $sql = "INSERT INTO professor (nome,cpf,email,senha) 
-                VALUES (:nome,:cpf,:email,:senha)";
 
-                $connect  = ConnectionFactory::getConnection()->prepare($sql); 
+    public function inserir(Professor $professor){
+        try{
+             $sql = "INSERT INTO professor (nome,cpf,email,senha) VALUES (:nome,:id,:email,:senha)";
+
+                $connect = ConnectionFactory::getConnection()->prepare($sql); 
                 $connect->bindValue(":nome", $professor->getNome());
                 $connect->bindValue(":cpf", $professor->getCpf());
                 $connect->bindValue(":email", $professor->getEmail());   
@@ -20,12 +18,33 @@ class ProfessorDao{
 
         }catch(PDOException $ex){
 
-            echo "<p> Error: "  . ($ex->getMessage()) . "<p>";
-          
+            echo "<p> Error: "  . $ex->getMessage() . "<p>";
         }
 
-   }
+     }
+
+
+     public function SelectId($id){
+
+        try{
+            $sql = "SELECT * FROM professor WHERE id = :id";
+            $connect = ConnectionFactory::getConnection()->query($sql); 
+            $connect->bindValue(":id",$id); // fetch
+            $connect ->execute();
+
+            return $connect->fetch(PDO::FETCH_ASSOC);
+
+
+        }catch(PDOException $ex){
+             echo "<p> Error: "  . $ex->getMessage() . "<p>";
+        }
+     }
+
+
+
 /*
+
+
      public function update(Professor $professor){
 
         try{
@@ -48,9 +67,16 @@ class ProfessorDao{
         }
 
      }
+
+
+
+
+     
+
      public function delete($id){
 
         try{
+
             $sql = "DELETE FROM professor WHERE id = :id";
             $connect = ConnectionFactory::getConnection()->prepare($sql); 
             $connect->bindValue("i:d",$id);
@@ -60,10 +86,12 @@ class ProfessorDao{
         }catch(PDOException $ex){
             
             echo "<p> Error: "  . $ex->getMessage() . "<p>";
+
         }
 
      }
-        */
+*/
+
   }
 
 

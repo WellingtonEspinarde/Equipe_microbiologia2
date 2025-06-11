@@ -2,23 +2,19 @@
 
 require_once __DIR__. "/Pessoa.php";
 
-class Professor extends Pessoa { #idade
-    private $email; 
+
+class Professor extends Pessoa {
+    private $email;
     private $senha;
 
-<<<<<<< HEAD
 
-    /*public function __construct($nome,$id, $cpf, $email,$senha){
+    public function __construct($nome,$id, $cpf, $email,$senha){
         parent:: __construct($nome, $id, $cpf);
-=======
-    /*public function __construct($nome, $id, $cpf, $email, $senha){
-        parent::__construct($nome, $id, $cpf);
->>>>>>> 752471f436526212ba70fa1a882fe62d352571e5
         $this->email = $email;
         $this->senha = $senha;
     
     }
- */
+ 
 
         public function professor(){
             parent:: __contruct();

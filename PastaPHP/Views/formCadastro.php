@@ -1,5 +1,4 @@
 
-
 <div class="card-body formulario-padrao">
     <form action="../Controller/ProfessorController.php" method="post">
 

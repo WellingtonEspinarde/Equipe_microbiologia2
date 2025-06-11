@@ -7,11 +7,8 @@ include __DIR__. '/../model/Professor.php';
 
 
 
-
 $professor = new Professor();
 $professorDao = new ProfessorDao;
-
-
 
 if(isset($_POST['cadastrar'])){
     $professor->setNome($_POST['nome']);
@@ -27,5 +24,7 @@ if($_SERVER["REQUEST_METHOD"]== "GET"){
     ConnectionFactory::getConnection();
 }
 ?>
+
+
 
 

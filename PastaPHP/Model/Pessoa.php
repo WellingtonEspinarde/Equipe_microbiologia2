@@ -4,11 +4,15 @@
         private $id;
         private $cpf;
 
-        public function __construct($nome, $id, $cpf){
+        public function __construct(){
+            
+        }
+
+       /* public function __construct($nome, $id, $cpf){
             $this->nome = $nome;
             $this->id = $id;
             $this->cpf = $cpf;
-        }
+        }*/
 
         public function getNome(){
             return $this->nome;

@@ -23,6 +23,11 @@
         </div>
 
         <div class="mb-3">
+            <label for="ano" class="form-label">Ano Letivo</label>
+            <input type="date" class="form-control" id="iano" name="ano" required>
+        </div>
+
+        <div class="mb-3">
             <!--    <h4>Gênero</h4>  é necessario ??????
                             <label for="genero" class="form-check-label">Masculino</label>
                             <input type="radio" class="form-check-input" name="genero" value="M">

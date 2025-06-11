@@ -3,6 +3,9 @@ include '../dao/ConnectionFactory.php';
 include __DIR__. '/../dao/PacienteDao.php';
 include __DIR__. '/../model/Paciente.php';
 
+$professor = new Paciente();
+$professorDao = new PacienteDao;
+
     if(isset($_POST['Cadastrar'])){
     $paciente->setExames($_POST['exame']);
     $paciente->setResultados($_POST['resultados']);

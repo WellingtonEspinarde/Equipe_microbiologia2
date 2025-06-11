@@ -6,11 +6,15 @@ class UsuarioSistema extends Pessoa{
      private $email;
      private $senha;
 
-      public function __construct($nome, $id, $cpf, $email, $senha) {
+     public function __construct(){
+       parent::__construct();
+     }
+
+     /* public function __construct($nome, $id, $cpf, $email, $senha) {
         parent::__construct($nome, $id, $cpf);
         $this->email = $email;
         $this->senha = $senha;
-    }
+    }*/
 
     public function getEmail() {
         return $this->email;

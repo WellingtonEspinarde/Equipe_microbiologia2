@@ -6,11 +6,15 @@ require_once __DIR__. "/UsuarioSistema.php";
         private $curso;
         private $anoLetivo;
 
-    public function __construct($nome, $id, $cpf, $email, $senha, $curso, $anoLetivo){
+        public function __construct(){
+            parent::__construct();
+        }
+
+    /*public function __construct($nome, $id, $cpf, $email, $senha, $curso, $anoLetivo){
             parent::__construct($nome, $id, $cpf, $email, $senha);
             $this->curso = $curso;
             $this->anoLetivo = $anoLetivo;
-        }     
+        }*/  
 
      public function getCurso(){
         return $this->curso;

@@ -12,7 +12,11 @@ class Exames {
     private $resultado;
     private $prioridade;
 
-    public function __construct($id, $idUsuario, $idPaciente, $nomeExame, $descricao, $tipoAmostra, $resultado, $prioridade){
+    public function __construct(){
+        
+    }
+
+    /*public function __construct($id, $idUsuario, $idPaciente, $nomeExame, $descricao, $tipoAmostra, $resultado, $prioridade){
         $this->id = $id;
         $this->idUsuario = $idUsuario;
         $this->idPaciente = $idPaciente;
@@ -22,7 +26,7 @@ class Exames {
         $this->resultado = $resultado;
         $this->prioridade = $prioridade;
 
-    }
+    }*/
 
     public function getId(){
         return $this->id;

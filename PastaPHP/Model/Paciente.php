@@ -19,7 +19,11 @@ class Paciente extends Pessoa {
     private $historicoMedico;
     private $alunoResponsavel; 
 
-    public function __construct($nome, $id, $cpf, $dataNascimento, $telContato, $emailContato, $nomeMae, $endereco, $remedioContinuo, $qualRemedio, $patologia, $qualPatologia, $tecResponsavel, $horarioTec, $exames, $resultados, $historicoMedico, $alunoResponsavel){
+    public function __construct() {
+    parent::__construct();
+    }
+
+    /*public function __construct($nome, $id, $cpf, $dataNascimento, $telContato, $emailContato, $nomeMae, $endereco, $remedioContinuo, $qualRemedio, $patologia, $qualPatologia, $tecResponsavel, $horarioTec, $exames, $resultados, $historicoMedico, $alunoResponsavel){
         parent::__construct($nome, $id, $cpf);
         $this->dataNascimento = $dataNascimento;
         $this->telContato = $telContato;
@@ -36,7 +40,7 @@ class Paciente extends Pessoa {
         $this->resultados = $resultados;
         $this->historicoMedico = $historicoMedico;
         $this->alunoResponsavel = $alunoResponsavel;
-    }
+    }*/
 
     public function getDataNascimento(){
         return $this->dataNascimento;

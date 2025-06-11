@@ -2,32 +2,55 @@
 CREATE DATABASE micro;
 
 CREATE TABLE Pessoa (
-    id INT AUTO_INCREMENT PRIMARY KEY, 
-    nome VARCHAR(100) NOT NULL,  
+    id INT AUTO_INCREMENT PRIMARY KEY,  
+    nome VARCHAR(100) NOT NULL, 
     cpf VARCHAR(14) UNIQUE NOT NULL  
 );
 
 CREATE TABLE paciente (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    exame VARCHAR(100) NOT NULL,
-    resultado VARCHAR(100) NOT NULL,
+    exames TEXT NOT NULL,
+    resultados TEXT NOT NULL,
     historicoMedico TEXT NOT NULL,
-    alunoResponsavel VARCHAR (255) NOT NULL
+    alunoResponsavel VARCHAR(100) NOT NULL,
+    idPessoa INT NOT NULL,
+    FOREIGN KEY (idPessoa) REFERENCES pessoa(id)
+);
+
+CREATE TABLE professor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR (255) NOT NULL,
+    senha VARCHAR (255) NOT NULL,
+    idPessoa INT NOT NULL,
+    FOREIGN KEY (idPessoa) REFERENCES pessoa(id)
+);
+
+CREATE TABLE Aluno (
+    id INT AUTO_INCREMENT PRIMARY KEY, 
+    curso VARCHAR(100) NOT NULL,  
+    anoLetivo DATE NOT NULL,
+    idPessoa INT NOT NULL,
+    idProfessor INT NOT NULL,
+    FOREIGN KEY (idPessoa) REFERENCES pessoa(id),
+    FOREIGN KEY (idProfessor) REFERENCES professor(id) 
 );
 
 CREATE TABLE Exames (
-    id SERIAL PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     nomeExame VARCHAR(100) NOT NULL,
     descricao VARCHAR(255) NOT NULL,
     tipoAmostra VARCHAR(100) NOT NULL,
     resultado VARCHAR(100) NOT NULL,
     prioridade INTEGER NOT NULL,
     idPaciente INT NOT NULL,
-    idPessoa INT NOT NULL,
-    FOREIGN KEY (idPaciente) REFERENCES PACIENTE(id),
-    FOREIGN KEY (idPessoa) REFERENCES PESSOA(id)   
+    idAluno INT NOT NULL,
+    idProfessor INT NOT NULL,
+    FOREIGN KEY (idPaciente) REFERENCES paciente (id),
+    FOREIGN KEY (idAluno) REFERENCES Aluno(id),
+    FOREIGN KEY (idProfessor) REFERENCES professor(id)   
 );
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -43,3 +66,5 @@ CREATE TABLE professor (
 
 
 
+=======
+>>>>>>> 6781684f57b6f9a1ee3ef8ceabec25c59fbf1b44

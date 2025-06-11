@@ -1,9 +1,8 @@
 <?php
 
+
+
 class ProfessorDao{
-
-
-  
 
     public function insert(Professor $professor){
         try{

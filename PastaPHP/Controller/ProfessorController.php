@@ -20,6 +20,7 @@ if(isset($_POST['cadastrar'])){
     $professor->setSenha($_POST['senha']);
     $professorDao->insert($professor);
     header("Location: ../index.php");
+    
 }
 
 if($_SERVER["REQUEST_METHOD"]== "GET"){

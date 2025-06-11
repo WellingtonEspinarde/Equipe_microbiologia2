@@ -7,9 +7,9 @@
 
     public static function getConnection() {
         if (!isset(self::$connection)) {
-            $host = 'localhost';
-            $dbName = 'micro';
-            $user = 'root';
+            $host = "localhost";
+            $dbName = "micro";
+            $user = "root";
             $pass = '';
             $port = 3307;
 

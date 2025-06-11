@@ -1,4 +1,4 @@
-public abstract class UsuarioSistema extends Pessoa { //
+public abstract class UsuarioSistema extends Pessoa { 
     private String email;
     private String senha;
 
@@ -28,6 +28,6 @@ public abstract class UsuarioSistema extends Pessoa { //
 
     @Override
     public String toString() {
-        return super.toString() + " UsuarioSistema [email=" + email + ", senha=****]";
+        return super.toString() + " [Email=" + email + ", Senha=****]";
     }
 }

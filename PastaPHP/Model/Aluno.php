@@ -1,13 +1,12 @@
 <?php
 
-require_once __DIR__. "/Professor.php";
+require_once __DIR__. "/UsuarioSistema.php";
 
-
-    class Aluno extends Professor {  #extende pessoa + rgm
+    class Aluno extends UsuarioSistema {
         private $curso;
         private $anoLetivo;
 
-        public function __construct($nome, $id, $cpf, $email, $senha, $curso, $anoLetivo){
+    public function __construct($nome, $id, $cpf, $email, $senha, $curso, $anoLetivo){
             parent::__construct($nome, $id, $cpf, $email, $senha);
             $this->curso = $curso;
             $this->anoLetivo = $anoLetivo;
@@ -31,7 +30,7 @@ require_once __DIR__. "/Professor.php";
 
    
       public function __toString(){
-        return parent::__toString(). "Curso: {$this->curso} - Ano Letivo: {$this->anoLetivo}";
+        return parent::__toString(). " Curso: {$this->curso} - Ano Letivo: {$this->anoLetivo}";
     }
 
     }

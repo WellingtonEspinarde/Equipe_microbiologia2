@@ -7,6 +7,6 @@ public class Professor extends UsuarioSistema {
 
     @Override
     public String toString() {
-        return super.toString() + " Professor [] " ;
+        return super.toString() + " Professor: " ;
     }
 }

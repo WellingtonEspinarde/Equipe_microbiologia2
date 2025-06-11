@@ -13,14 +13,13 @@ class Paciente extends Pessoa {
     private $qualPatologia;
     private $tecResponsavel;
     private $horarioTec;
-    private $historicoMed;
 
     private $exames;
     private $resultados;
     private $historicoMedico;
     private $alunoResponsavel; 
 
-    public function __construct($nome, $id, $cpf, $dataNascimento, $telContato, $emailContato, $nomeMae, $endereco, $remedioContinuo, $qualRemedio, $patologia, $qualPatologia, $tecResponsavel, $horarioTec, $historicoMed, $exames, $resultados, $historicoMedico, $alunoResponsavel){
+    public function __construct($nome, $id, $cpf, $dataNascimento, $telContato, $emailContato, $nomeMae, $endereco, $remedioContinuo, $qualRemedio, $patologia, $qualPatologia, $tecResponsavel, $horarioTec, $exames, $resultados, $historicoMedico, $alunoResponsavel){
         parent::__construct($nome, $id, $cpf);
         $this->dataNascimento = $dataNascimento;
         $this->telContato = $telContato;
@@ -33,7 +32,6 @@ class Paciente extends Pessoa {
         $this->qualPatologia = $qualPatologia;
         $this->tecResponsavel = $tecResponsavel;
         $this->horarioTec = $horarioTec;
-        $this->historicoMed = $historicoMed;
         $this->exames = $exames;  
         $this->resultados = $resultados;
         $this->historicoMedico = $historicoMedico;
@@ -128,14 +126,6 @@ class Paciente extends Pessoa {
         $this->horarioTec = $horarioTec; 
     }
 
-    public function getHistoricoMed(){
-        return $this->historicoMed;
-    }
-
-    public function setHistoricoMed($historicoMed){
-        $this->historicoMed = $historicoMed; 
-    }
-
     public function getExames(){
         return $this->exames;
     }
@@ -170,6 +160,7 @@ class Paciente extends Pessoa {
 
     public function __toString(){
         return parent::__toString() . 
-            " Data de Nascimento: {$this->dataNascimento} - Telefone p/ Contato: {$this->telContato} - Email p/ Cintato: {$this->emailContato} - Nome da Mãe: {$this->nomeMae} - Endereço: {$this->endereco} - Toma remédio contínuo: {$this->remedioContinuo} - Nome do Remédio: {$this->qualRemedio}  Alguma Patologia: {$this->patologia} - Qual Patologia: {$this->qualPatologia} - Técnico responsável: {$this->tecResponsavel} - Horario do Técnico: {$this->horarioTec} - Historico Medico: {$this->historicoMed} - Exame: {$this->exames} - Resultado: {$this->resultados} - Historico Medico: {$this->historicoMedico} - Aluno Responsavel: {$this->alunoResponsavel}";
+            " Data de Nascimento: {$this->dataNascimento} - Telefone p/ Contato: {$this->telContato} - Email p/ Contato: {$this->emailContato} - Nome da Mãe: {$this->nomeMae} - Endereço: {$this->endereco} - Toma remédio contínuo: {$this->remedioContinuo} - Nome do Remédio: {$this->qualRemedio}  Alguma Patologia: {$this->patologia} - Qual Patologia: {$this->qualPatologia} - Técnico responsável: {$this->tecResponsavel} - Horario do Técnico: {$this->horarioTec} - Exame: {$this->exames} - Resultado: {$this->resultados} - Historico Medico: {$this->historicoMedico} - Aluno Responsavel: {$this->alunoResponsavel}";
     }
 }
+?>

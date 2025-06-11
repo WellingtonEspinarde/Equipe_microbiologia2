@@ -5,6 +5,7 @@ include __DIR__. '/../dao/ExamesDao.php';
 include __DIR__. '/../model/Exames.php';
 //$exame = new Exames();
 //$examesDao = new ExamesDao();
+
 if (isset($_POST['cadastrar'])) {
     $exame->setIdUsuario($_POST['idUsuario']);
     $exame->setIdPaciente($_POST['idPaciente']);

@@ -18,7 +18,7 @@
                 </div>
                 
                 <div class="card-body formulario-padrao">
-                    <form action="../Controller/ExamesController.php" method="post">
+                    <form action="../Controller/PacienteController.php" method="post">
 
                     <div class="mb-3">
                         <label for="inome" class="form-label">Nome Completo</label>
@@ -71,7 +71,7 @@
 
                         <br />
                         <label for="iremedioQual" class="form-label">Qual?</label>
-                        <input type="text" class="form-control" name="remedioQual" id="iremedioQual" />
+                        <input type="text" class="form-control" name="qualremedio" id="iremedioQual" />
                     </div>
 
                     <div class="mb-3">
@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <input type="submit" name="Cadastrar" value="cadastrar" class="btn btn-primary">
                     </div>
 
                     </form>

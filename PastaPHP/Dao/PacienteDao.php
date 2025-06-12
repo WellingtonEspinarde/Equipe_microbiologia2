@@ -4,25 +4,32 @@ class PacienteDao{
     public function inserir(Paciente $paci){
         
         try{
-            $sql = "INSERT INTO paciente (nome, cpf, exame, resultado, historicomedico, alunoResponsavel) #id retirado
-                VALUES (:nome, :cpf, :exame, :resultado, :historicomedico, :alunoresponsavel)"; #id retirado
+            $sql = "INSERT INTO paciente (nome, cpf, dataNascimento, telContato, emailContato, nomeMae, endereco, remedioContinuo, qualRemedio, patologia, qualPatologia, tecResponsavel, horarioTec, exames, historicoMedico, resultados)
+                VALUES (:nome, :cpf, :dataNascimento, :telContato, :emailContato, :nomeMae, :endereco, :remedioContinuo, :qualRemedio, :patologia, :qualPatologia, :tecResponsavel, :horarioTec, :exames, :historicoMedico, :resultados)"; 
             $conn = ConnectionFactory::getConnection()->prepare($sql);
             $conn->bindValue(":nome", $paci->getNome());
-           #$conn->bindValue(":id", $paci->getId());         talvez nao seja necessario é auto increment no banco
             $conn->bindValue(":cpf", $paci->getCpf());
-            $conn->bindValue(":exame", $paci->getExames());
-            $conn->bindValue(":resultado", $paci->getResultados());
-            $conn->bindValue(":historicomedico", $paci->getHistoricoMecido());
-            $conn->bindValue(":alunoresponsavel", $paci->getAlunoResponsavel());
-
+            $conn->bindValue(":dataNascimento", $paci->getDataNascimento());
+            $conn->bindValue(":telContato", $paci->getTelContato());
+            $conn->bindValue(":emailContato", $paci->getEmailContato());
+            $conn->bindValue(":nomeMae", $paci->getNomeMae());
+            $conn->bindValue(":endereco", $paci->getEndereco());
+            $conn->bindValue(":exames", $paci->getExames());
+            $conn->bindValue(":remedioContinuo", $paci->getRemedioContinuo());
+            $conn->bindValue(":qualRemedio", $paci->getQualRemedio());
+            $conn->bindValue(":patologia", $paci->getPatologia());
+            $conn->bindValue(":qualPatologia", $paci->getQualPatologia());
+            $conn->bindValue(":tecResponsavel", $paci->getTecResponsavel());
+            $conn->bindValue(":horarioTec", $paci->getHorarioTec());
+            $conn->bindValue(":historicoMedico", $paci->getHistoricoMedico());
+            $conn->bindValue(":resultados", $paci->getResultados());
             return $conn->execute();
+
         }catch(PDOException $ex){
             echo "<p> Erro </p> <p> $ex </p>";
         }
     }
 
-
-    
      public function SelectId($id){
 
         try{

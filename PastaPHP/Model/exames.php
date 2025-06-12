@@ -1,6 +1,8 @@
 <?php 
 
-require_once __DIR__ . '/../dao/ExamesDao.php';
+require_once __DIR__ .'/../dao/ExamesDao.php';
+//require_once __DIR__.'../Model/Exame.php'; 
+
 
 class Exames {
     private $id;

@@ -4,7 +4,7 @@ require_once __DIR__. "/UsuarioSistema.php";
 
     class Aluno extends UsuarioSistema {
         private $curso;
-        private $anoLetivo;
+        //private $anoLetivo;  classe em comum 
 
         public function __construct(){
             parent::__construct();
@@ -24,17 +24,17 @@ require_once __DIR__. "/UsuarioSistema.php";
         $this->curso = $curso; 
     }
 
-     public function getAnoLetivo(){
+     /*public function getAnoLetivo(){
         return $this->anoLetivo;
     }
     
     public function setAnoLetivo($anoLetivo){
         $this->anoLetivo = $anoLetivo; 
-    }
+    }*/
 
    
       public function __toString(){
-        return parent::__toString(). " Curso: {$this->curso} - Ano Letivo: {$this->anoLetivo}";
+        return parent::__toString(). " Curso: {$this->curso}";
     }
 
     }

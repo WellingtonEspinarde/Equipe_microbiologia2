@@ -3,13 +3,13 @@
     <form action="../Controller/ProfessorController.php" method="post">
 
         <div class="mb-3">
-            <label for="cpf" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="CPF" name="cpf" required>
+            <label for="inome" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="inome" name="nome" required>
         </div>
 
         <div class="mb-3">
-            <label for="nome" class="form-label">Nome Completo</label>
-            <input type="text" class="form-control" id="nome" name="nome" required>
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="CPF" name="cpf" required>
         </div>
 
         <div class="mb-3">
@@ -38,11 +38,11 @@
 
         <div class="mb-3">
             <h4>Você é?</h4>
-            <label for="ALUNO" class="form-check-label">Discente</label>
-            <input type="radio" class="form-check-input" name="Func" value="ALUN">
+            <label for="ALUNO" class="form-check-label">Aluno</label>
+            <input type="radio" class="form-check-input" name="cargo" value="ALUN">
 
-            <label for="PROFESOR" class="form-check-label">Docente</label>
-            <input type="radio" class="form-check-input" name="Func" value="PROF">
+            <label for="PROFESOR" class="form-check-label">Professor</label>
+            <input type="radio" class="form-check-input" name="cargo" value="PROF">
         </div>
 
         <div class="d-grid">

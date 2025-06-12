@@ -7,15 +7,25 @@ CREATE TABLE Pessoa (
     cpf VARCHAR(14) UNIQUE NOT NULL  
 );
 
-CREATE TABLE paciente (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    exames TEXT NOT NULL,
-    resultados TEXT NOT NULL,
-    historicoMedico TEXT NOT NULL,
-    alunoResponsavel VARCHAR(100) NOT NULL,
-    idPessoa INT NOT NULL,
-    FOREIGN KEY (idPessoa) REFERENCES pessoa(id)
-);
+CREATE TABLE paciente( 
+    id int AUTO_INCREMENT PRIMARY key,
+    nome varchar(255) not null,
+    cpf varchar(14) UNIQUE not null,
+    dataNascimento date NOT null,
+    telContato varchar(11) not null,
+    emailContato varchar(255) not null,
+    nomeMae varchar(255) not null,
+    endereco varchar(255) not null,
+    remedioContinuo varchar(100) not null,
+    qualRemedio varchar(255),
+    patologia varchar(100) not null,
+    qualPatologia varchar (255),
+    tecResponsavel varchar(255) not null,
+    horarioTec varchar(255) not null,
+    exames varchar(100) not null,
+    historicoMedico varchar (255),
+    resultados varchar(255) not null
+    );
 
 CREATE TABLE professor (
     id INT AUTO_INCREMENT PRIMARY KEY,

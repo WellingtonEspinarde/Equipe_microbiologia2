@@ -3,10 +3,11 @@
 include '../dao/ConnectionFactory.php';
 include __DIR__. '/../dao/ExamesDao.php';
 include __DIR__. '/../model/Exames.php';
-//$exame = new Exames();
-//$examesDao = new ExamesDao();
 
-if (isset($_POST['cadastrar'])) {
+$exame = new Exames();
+$examesDao = new ExamesDao();
+
+if (isset($_POST['Cadastrar'])) {
     $exame->setIdUsuario($_POST['idUsuario']);
     $exame->setIdPaciente($_POST['idPaciente']);
     $exame->setNomeExame($_POST['nomeExame']);
@@ -14,7 +15,7 @@ if (isset($_POST['cadastrar'])) {
     $exame->setTipoAmostra($_POST['tipoAmostra']);
     $exame->setResultado($_POST['resultado']);
     $exame->setPrioridade($_POST['prioridade']);
-    $professorDao->inserir($exame);
+    $exameDao->inserir($exame);
     header("Location: ../index.php");
 
     /*if ($examesDao->inserir($exame)) {

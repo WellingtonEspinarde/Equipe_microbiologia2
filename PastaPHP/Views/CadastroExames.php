@@ -81,7 +81,8 @@
                     <input type="radio" class="form-check-input" name="prioridade" id="ibaixa" value="baixa">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                <button type="submit" name="Cadastrar" class="btn btn-primary">Cadastrar</button>
+                
             </form>
                      </div>
                 </div>

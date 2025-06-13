@@ -15,14 +15,17 @@ if(isset($_POST['cadastrar'])){
     $professor->setCpf($_POST['cpf']);
     $professor->setemail($_POST['email']);
     $professor->setSenha($_POST['senha']);
-    $professorDao->insert($professor);
-    header("Location: ../index.php");
+    $professorDao->inserir($professor);
+    header("Location: ../Views/index.php");
     
 }
 
 if($_SERVER["REQUEST_METHOD"]== "GET"){
     ConnectionFactory::getConnection();
 }
+
+//"Location: ../Views/CadastroPaciente.php"
+
 ?>
 
 

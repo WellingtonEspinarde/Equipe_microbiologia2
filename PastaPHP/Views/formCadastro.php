@@ -24,7 +24,7 @@
 
         <div class="mb-3">
             <label for="ano" class="form-label">Ano Letivo</label>
-            <input type="date" class="form-control" id="iano" name="ano" required>
+            <input type="date" class="form-control" id="iano" name="anoletivo" required>
         </div>
 
         <div class="mb-3">

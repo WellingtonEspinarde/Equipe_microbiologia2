@@ -18,13 +18,9 @@ if (isset($_POST['Cadastrar'])) {
     $exameDao->inserir($exame);
     header("Location: ../index.php");
 
-    /*if ($examesDao->inserir($exame)) {
-        header("Location: ../index.php");
-    } else {
-        echo "Erro ao cadastrar exame.";
-    }*/
 }
-/*if (isset($_GET['listar'])) {
+/*
+if (isset($_GET['listar'])) {
     $exames = $examesDao->listarTodos();
     if ($exames) {
         foreach ($exames as $ex) {
@@ -39,9 +35,9 @@ if (isset($_POST['Cadastrar'])) {
         }
     } else {
         echo "Nenhum exame encontrado.";
-    }
+    }*/
 
-}*/
+}
 if($_SERVER["REQUEST_METHOD"]== "GET"){
     ConnectionFactory::getConnection();
 }

@@ -17,56 +17,19 @@
                         <h3>Cadastro de Exames</h3>
                 </div>
 
-                <div class="card-body formulario-padrao">
-                    <form action="#" method="post">
+                <div class="mb-3">
+                        <h4>Tipo de exame</h4>
+                    <label for="iescarro" class="form-check-label">Escarro</label>
+                    <input type="radio" class="form-check-input" name="tipo" id="iescarro" value="escarro">
+                
+                    <label for="iurina" class="form-check-label">Urína</label>
+                    <input type="radio" class="form-check-input" name="tipo" id="iurina" value="urina">
 
-                    <div class="mb-3">  <!--Pode ser que tira-->
-                       <label for="inome" class="form-label">Nome do Exame:</label>
-                       <input type="text" class="form-control" id="inome" name="nomeExame" required>
-                    </div>
-
-
-                    <div class="mb-3">
-                       <label  for="iidusu" class="form-label">ID Usuário:</label>
-                       <input type="text" class="form-control" id="iidusu" name="idUsuario" required>
-                    </div>
-
-                    <div class="mb-3">
-                       <label for="iidpac" class="form-label">ID Paciente:</label>
-                       <input type="text" class="form-control" id="iidpac" name="idPaciente" required>
-                    </div>
-
-                    <div class="mb-3">
-                              <h4>Amostra solicitado</h4>
-                    <div class="mb-3">
-                        <input type="radio" class="form-check-input" name="tipoAmostra" id="iswab" value="swab">
-                        <label for="iswab" class="form-check-label">Swab ocular</label>
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="radio" class="form-check-input" name="tipoAmostra" id="iurocultura" value="urocultura">
-                        <label for="iurocultura" class="form-check-label">Urocultura com antibiograma</label>
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="radio" class="form-check-input" name="tipoAmostra" id="iescarro" value="escarro">
-                        <label for="iescarro" class="form-check-label">Escarro para exame de Micobacterium tuberculosis</label>
-                    </div>
-
-                    <div class="mb-3">
-                        <input type="radio" class="form-check-input" name="tipoAmostra" id="inao" value="nao">
-                        <label for="inao" class="form-check-label">Não foi solicitado</label>
-                    </div>
                 </div>
 
                 <div class="mb-3">
                     <label for="descricao">Descrição:</label>
                     <textarea name="descricao" id="descricao" rows="4" cols="50" required></textarea>
-                </div>
-
-                <div class="mb-3">
-                    <label for="resultado">Resultado:</label>
-                    <textarea name="resultado" id="resultado" rows="4" cols="50"></textarea>
                 </div>
 
                 <div class="mb-3">

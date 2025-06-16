@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AlunoController {
-    private ArrayList<Aluno> alunos = new ArrayList<>();
+    private ArrayList<AlunoController> alunos = new ArrayList<>();
     private Scanner scanner = new Scanner(System.in);
 
     public void cadastrarAluno() {
@@ -24,14 +24,14 @@ public class AlunoController {
         System.out.print("Ano Letivo: ");
         String anoLetivo = scanner.nextLine();
 
-        Aluno aluno = new Aluno(nome, cpf, email, senha, curso, anoLetivo);
+        AlunoController aluno = new AlunoController ();
         alunos.add(aluno);
         System.out.println("Aluno cadastrado com sucesso!");
     }
 
     public void listarAlunos() {
         System.out.println("\n--- Lista de Alunos ---");
-        for (Aluno a : alunos) {
+        for (AlunoController a : alunos) {
             System.out.println(a);
         }
     }

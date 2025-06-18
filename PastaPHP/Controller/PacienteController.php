@@ -4,7 +4,7 @@ include __DIR__. '/../dao/PacienteDao.php';
 include __DIR__. '/../model/Paciente.php';
 
 $paciente = new Paciente();
-$pacienteDao = new PacienteDao();//
+$pacienteDao = new PacienteDao();
 
 if(isset($_POST['Cadastrar'])){
     $paciente->setNome($_POST['nome']);
@@ -28,7 +28,7 @@ if(isset($_POST['Cadastrar'])){
     header("Location: ../Views/CadastroPaciente.php");
 }
 
-if($_SERVER["REQUEST_METHOD"]== "GET"){
+if($_SERVER["REQUEST_METHOD"] == "GET"){
     ConnectionFactory::getConnection();
 }
 

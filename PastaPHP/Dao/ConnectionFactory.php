@@ -1,9 +1,7 @@
 <?php
 
-
-
  class ConnectionFactory { // padrão singleton  
-    static $connection;
+    static $connection; 
 
     public static function getConnection() {
         if (!isset(self::$connection)) {
@@ -15,8 +13,8 @@
 
             try {
                 self::$connection = new PDO( "mysql:host=$host;dbname=$dbName;port=$port",$user,$pass);
-                self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                 echo "Conectado com sucesso!!";
+                //self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  configura o PDO para lançar exceções, qualquer erro é capturado
+                echo "Conectado com sucesso!!";
                  
             } catch (PDOException $ex){
                 echo "ERRO ao conectar no banco de dados!<br>" . $ex->getMessage();

@@ -30,6 +30,15 @@ class PacienteDao{
         }
     }
 
+
+    
+
+
+
+
+    
+
+
      public function SelectId($id){
 
         try{

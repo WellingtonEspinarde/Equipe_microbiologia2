@@ -9,7 +9,7 @@
 
         <div class="mb-3">
             <label for="cpf" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="CPF" name="cpf" required>
+            <input type="text" class="form-control" id="cpf" name="cpf" required>
         </div>
 
         <div class="mb-3">
@@ -23,30 +23,21 @@
         </div>
 
         <div class="mb-3">
-            <label for="ano" class="form-label">Ano Letivo</label>
+            <label for="iano" class="form-label">Ano Letivo</label>
             <input type="date" class="form-control" id="iano" name="anoletivo" required>
         </div>
 
-        <div class="mb-3">
-            <!--    <h4>Gênero</h4>  é necessario ??????
-                            <label for="genero" class="form-check-label">Masculino</label>
-                            <input type="radio" class="form-check-input" name="genero" value="M">
+         <div class="mb-3">
+            <h4>Cargo:</h4>
+            <label for="ialuno" class="form-check-label">Aluno</label>
+            <input type="radio" class="form-check-input" name="cargo" id="ialuno" value="ialuno">
 
-                            <label for="genero" class="form-check-label">Feminino</label>
-                            <input type="radio" class="form-check-input" name="genero" value="M">-->
-        </div>
-
-        <div class="mb-3">
-            <h4>Você é?</h4>
-            <label for="ALUNO" class="form-check-label">Aluno</label>
-            <input type="radio" class="form-check-input" name="cargo" value="ALUN">
-
-            <label for="PROFESOR" class="form-check-label">Professor</label>
-            <input type="radio" class="form-check-input" name="cargo" value="PROF">
-        </div>
+            <label for="iprofessor" class="form-check-label">Professor</label>
+            <input type="radio" class="form-check-input" name="cargo" id="iprofessor" value="iprofessor">
+        </div> 
 
         <div class="d-grid">
-            <input type="submit" name="cadastrar" value="cadastrar" class="btn btn-primary">
+            <input type="submit" name="Cadastrar" value="cadastrar" class="btn btn-primary">
         </div>
 
 </div>

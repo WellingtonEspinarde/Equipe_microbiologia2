@@ -1,3 +1,5 @@
+package PastaJava.model;
+
 public class Professor extends UsuarioSistema {
     public Professor() {}
 

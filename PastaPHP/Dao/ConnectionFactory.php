@@ -13,7 +13,6 @@
 
             try {
                 self::$connection = new PDO( "mysql:host=$host;dbname=$dbName;port=$port",$user,$pass);
-                //self::$connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  configura o PDO para lançar exceções, qualquer erro é capturado
                 echo "Conectado com sucesso!!";
                  
             } catch (PDOException $ex){

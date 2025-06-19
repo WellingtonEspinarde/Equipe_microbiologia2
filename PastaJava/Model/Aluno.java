@@ -1,3 +1,4 @@
+package PastaJava.model;
 
 public class Aluno extends UsuarioSistema {
     private String curso;

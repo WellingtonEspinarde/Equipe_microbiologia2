@@ -1,3 +1,5 @@
+package PastaJava.model;
+
 public class Paciente extends Pessoa {
 
     private String dataNascimento; //  import java.time.LocalDate;   private LocalDate dataNascimento;

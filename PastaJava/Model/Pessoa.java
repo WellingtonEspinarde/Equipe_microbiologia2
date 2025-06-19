@@ -1,3 +1,5 @@
+package PastaJava.model;
+
 public class Pessoa {
     private String nome;
     private int id;

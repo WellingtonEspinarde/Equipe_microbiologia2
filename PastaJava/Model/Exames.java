@@ -1,3 +1,4 @@
+package PastaJava.model;
 
 public class Exames {
     private int id;

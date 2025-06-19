@@ -37,7 +37,7 @@
         </div> 
 
         <div class="d-grid">
-            <input type="submit" name="Cadastrar" value="cadastrar" class="btn btn-primary">
+            <input type="submit" name="cadastrar" value="cadastrar" class="btn btn-primary">
         </div>
 
 </div>

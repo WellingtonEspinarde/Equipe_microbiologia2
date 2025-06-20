@@ -64,10 +64,10 @@
                     <div class="mb-3">
                         <h4>Toma remédio contínuo</h4>
                         <label for="iremedioSim" class="form-check-label">SIM</label>
-                        <input type="radio" class="form-check-input" name="remedio" value="remediosim" id="iremedioSim">
+                        <input type="radio" class="form-check-input" name="remedio" value="Sim" id="iremedioSim">
 
                         <label for="iremedioNao" class="form-check-label">NÃO</label>
-                        <input type="radio" class="form-check-input" name="remedio" value="remedionao" id="iremedioNao">
+                        <input type="radio" class="form-check-input" name="remedio" value="Nao" id="iremedioNao">
 
                         <br />
                         <label for="iremedioQual" class="form-label">Qual?</label>
@@ -77,10 +77,10 @@
                     <div class="mb-3">
                         <h4>Alguma patologia que trata</h4>
                         <label for="ipatologiaSim" class="form-check-label">SIM</label>
-                        <input type="radio" class="form-check-input" name="patologia" value="patologiasim" id="ipatologiaSim">
+                        <input type="radio" class="form-check-input" name="patologia" value="Sim" id="ipatologiaSim">
 
                         <label for="ipatologiaNao" class="form-check-label">NÃO</label>
-                        <input type="radio" class="form-check-input" name="patologia" value="patologianao" id="ipatologiaNao">
+                        <input type="radio" class="form-check-input" name="patologia" value="Nao" id="ipatologiaNao">
 
                         <br />
                         <label for="ipatologiaQual" class="form-label">Qual?</label>
@@ -93,10 +93,10 @@
                         <input type="text" class="form-control" name="alunoResponsavel" id="alunoResponsavel">
 
                         <label for="iperiodoMatutino" class="form-check-label">Matutino</label>
-                        <input type="radio" class="form-check-input" name="periodo" value="responsavelmatutino" id="iperiodoMatutino">
+                        <input type="radio" class="form-check-input" name="periodo" value="Matutino" id="iperiodoMatutino">
 
                         <label for="iperiodoNoturno" class="form-check-label">Noturno</label>
-                        <input type="radio" class="form-check-input" name="periodo" value="responsavelnoturno" id="iperiodoNoturno">
+                        <input type="radio" class="form-check-input" name="periodo" value="Noturno" id="iperiodoNoturno">
                     </div>
 
                     <div class="mb-3">
@@ -118,6 +118,46 @@
             </div>
         </div>
     </div>
+
+        <div class=" row justify-content-center mt-4">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nome da mãe</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Exame solicitado</th>
+                    <th scope="col">Toma remédio contínuo</th>
+                    <th scope="col">Qual Remedio</th>
+                    <th scope="col">Patologia</th>
+                    <th scope="col">Qual Patologia</th>
+                    <th scope="col">Técnico responsável</th>
+                    <th scope="col">Horario do Técnico</th>
+                    <th scope="col">Histórico Médico</th>
+                    <th scope="col">Resultados</th>
+                    <th scope="col">Ações</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                        <?php 
+                        
+                        require '../Controller/PacienteController.php';
+
+                        LerPaciente();
+                        
+                        ?>
+
+                </tbody>
+            </table>
+        </div>
+
    </div>
 </body>
 </html>

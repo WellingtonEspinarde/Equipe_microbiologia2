@@ -30,9 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     ConnectionFactory::getConnection();
 }
 
-function LerProfessor()
-{
-
+function LerProfessor(){
 
     $professor = new Professor();
     $professorDao = new ProfessorDao();
@@ -60,5 +58,4 @@ function LerProfessor()
                         ";
     }
 
-    
 }

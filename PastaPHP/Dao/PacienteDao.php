@@ -30,16 +30,7 @@ class PacienteDao{
         }
     }
 
-
-    
-
-
-
-
-    
-
-
-     public function SelectId($id){
+   /*  public function SelectId($id){
 
         try{
             $sql = "SELECT * FROM paciente WHERE id = :id";
@@ -53,9 +44,48 @@ class PacienteDao{
         }catch(PDOException $ex){
              echo "<p> Error: "  . $ex->getMessage() . "<p>";
         }
-     }
+     }*/
 
-    
+      public function readPaciente(){
+
+        try{
+           
+            $sql = "SELECT * FROM paciente";
+            $connect = ConnectionFactory::getConnection()->query($sql);
+            $connect ->execute();
+
+            $list = $connect->fetchAll(PDO::FETCH_ASSOC);
+
+            $listPaciente= array();
+            foreach($list as $line){
+                $Pacienteline = new Paciente();
+                $Pacienteline->setId($line ['id']);
+                $Pacienteline->setNome($line ['nome']);
+                $Pacienteline->setCpf($line ['cpf']);
+                $Pacienteline->setDataNascimento($line ['dataNascimento']);
+                $Pacienteline->setTelContato($line ['telContato']);
+                $Pacienteline->setEmailContato($line ['emailContato']);
+                $Pacienteline->setNomeMae($line ['nomeMae']);
+                $Pacienteline->setEndereco($line ['endereco']);
+                $Pacienteline->setRemedioContinuo($line ['remedioContinuo']);
+                $Pacienteline->setQualRemedio($line ['qualRemedio']);
+                $Pacienteline->setPatologia($line ['patologia']);
+                $Pacienteline->setQualPatologia($line ['qualPatologia']);
+                $Pacienteline->setTecResponsavel($line ['tecResponsavel']);
+                $Pacienteline->setHorarioTec($line ['horarioTec']);
+                $Pacienteline->setExames($line ['exames']);
+                $Pacienteline->setHistoricoMedico($line ['historicoMedico']);
+                $Pacienteline->setResultados($line ['resultados']);
+                
+                $listPaciente[] = $Pacienteline;
+            }
+
+            return $listPaciente;
+
+        }catch(PDOException $ex){
+             echo "<p> Error: "  . $ex->getMessage() . "<p>";
+        }
+     }
 
 }
 ?>

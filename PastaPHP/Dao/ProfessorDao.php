@@ -24,11 +24,7 @@ class ProfessorDao{
 
      }
 
-     
-
-/*
-
-     public function SelectId($id){
+/*   public function SelectId($id){
 
         try{
             $sql = "SELECT * FROM professor WHERE id = :id";
@@ -45,7 +41,6 @@ class ProfessorDao{
      }
 
 */
-
      
      public function readProfessor(){
 
@@ -79,13 +74,7 @@ class ProfessorDao{
         }
      }
 
-
-
-
-
-/*
-
-     public function update(Professor $professor){
+/*     public function update(Professor $professor){
 
         try{
 
@@ -108,10 +97,6 @@ class ProfessorDao{
 
      }
 
-
-
-
-     
 
      public function delete($id){
 

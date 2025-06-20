@@ -13,7 +13,7 @@
 
             try {
                 self::$connection = new PDO( "mysql:host=$host;dbname=$dbName;port=$port",$user,$pass);
-                echo "Conectado com sucesso!!";
+                //echo "Conectado com sucesso!!";
                  
             } catch (PDOException $ex){
                 echo "ERRO ao conectar no banco de dados!<br>" . $ex->getMessage();

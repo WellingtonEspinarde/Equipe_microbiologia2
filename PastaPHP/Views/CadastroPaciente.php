@@ -118,46 +118,48 @@
             </div>
         </div>
     </div>
+</div>
 
-        <div class=" row justify-content-center mt-4">
+  <!-- TABELA CENTRALIZADA -->
+<div class="container">
+  <div class="row justify-content-center mt-4">
+    <div class="col-lg-10">
+      <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle">
+          <thead class="table-light">
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Data de Nascimento</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">Email</th>
+              <th scope="col">Nome da mãe</th>
+              <th scope="col">Endereço</th>
+              <th scope="col">Exame solicitado</th>
+              <th scope="col">Toma remédio contínuo</th>
+              <th scope="col">Qual Remédio</th>
+              <th scope="col">Patologia</th>
+              <th scope="col">Qual Patologia</th>
+              <th scope="col">Técnico responsável</th>
+              <th scope="col">Horário do Técnico</th>
+              <th scope="col">Histórico Médico</th>
+              <th scope="col">Resultados</th>
+              <th scope="col">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php                         
+              require '../Controller/PacienteController.php';
+              LerPaciente();                        
+            ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">CPF</th>
-                    <th scope="col">Data de Nascimento</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Nome da mãe</th>
-                    <th scope="col">Endereço</th>
-                    <th scope="col">Exame solicitado</th>
-                    <th scope="col">Toma remédio contínuo</th>
-                    <th scope="col">Qual Remedio</th>
-                    <th scope="col">Patologia</th>
-                    <th scope="col">Qual Patologia</th>
-                    <th scope="col">Técnico responsável</th>
-                    <th scope="col">Horario do Técnico</th>
-                    <th scope="col">Histórico Médico</th>
-                    <th scope="col">Resultados</th>
-                    <th scope="col">Ações</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php 
-                        
-                        require '../Controller/PacienteController.php';
-
-                        LerPaciente();
-                        
-                        ?>
-
-                </tbody>
-            </table>
-        </div>
-
-   </div>
+   
 </body>
 </html>

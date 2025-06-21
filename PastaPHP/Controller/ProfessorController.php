@@ -17,7 +17,7 @@ if (isset($_POST['cadastrar'])) {
 
     $professorDao->inserir($professor);
 
-    // header("Location: ../Views/index.php");
+    header("Location: ../Views/index.php");
 
 }
 
@@ -30,6 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     ConnectionFactory::getConnection();
 }
 
+
+
 function LerProfessor(){
 
     $professor = new Professor();
@@ -41,6 +43,7 @@ function LerProfessor(){
 
     foreach ($lista as $prof) {
         echo " <tr>
+
                             <td>{$prof->getId()}</td>
                             <td>{$prof->getNome()}</td>
                             <td>{$prof->getCpf()}</td>
@@ -50,7 +53,9 @@ function LerProfessor(){
 
                             <td>
 
-                            <a href = '../Views/Cadastro.php?editar={$prof->getId()}' class = 'btn btn-primary'>Editar</a>
+                                <a href = '../Views/Cadastro.php?editar={$prof->getId()}' class = 'btn btn-primary'>Editar</a>
+                                
+                                
 
                             </td>
                             

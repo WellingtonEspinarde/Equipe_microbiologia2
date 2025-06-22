@@ -24,7 +24,6 @@ class ProfessorDao{
 
      }
 
-
      
      public function readProfessor(){
 
@@ -49,18 +48,18 @@ class ProfessorDao{
                 $listProfessor[] = $Professorline;
             }
 
+
             return $listProfessor;
 
         }catch(PDOException $ex){
              echo "<p> Error: "  . $ex->getMessage() . "<p>";
+
         }
      }
 
 
-
+     
      public function upProfessor(){
-
-        
 
 
      }

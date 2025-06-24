@@ -1,6 +1,7 @@
 <?php
 class PacienteDao{
 
+    //Creat
     public function inserir(Paciente $paci){
         
         try{
@@ -52,6 +53,7 @@ class PacienteDao{
         return $Pacienteline;
     }
 
+    //Read
       public function readPaciente(){
         try{
            
@@ -73,6 +75,7 @@ class PacienteDao{
         }
      }
 
+     //Update
      public function editar(Paciente $paci){
         try{
             $sql = "UPDATE paciente SET 
@@ -83,17 +86,17 @@ class PacienteDao{
             emailContato=:emailContato,
             nomeMae=:nomeMae,
             endereco=:endereco,
+            exames=:exames,
             remedioContinuo=:remedioContinuo,
             qualRemedio=:qualRemedio,
             patologia=:patologia,
             qualPatologia=:qualPatologia,
             tecResponsavel=:tecResponsavel,
-            horarioTec=:horarioTec,
-            
+            horarioTec=:horarioTec,            
             historicoMedico=:historicoMedico,
             resultados=:resultados WHERE id = :id";
-            echo $sql;
-            echo $paci->__toString();
+            //echo $sql;
+            //echo $paci->__toString();
             $conn = ConnectionFactory::getConnection()->prepare($sql);
             $conn->bindValue(":id", $paci->getId());
             $conn->bindValue(":nome", $paci->getNome());
@@ -103,15 +106,15 @@ class PacienteDao{
             $conn->bindValue(":emailContato", $paci->getEmailContato());
             $conn->bindValue(":nomeMae", $paci->getNomeMae());
             $conn->bindValue(":endereco", $paci->getEndereco());
-            //$conn->bindValue(":exames", $paci->getExames());
+            $conn->bindValue(":exames", $paci->getExames());   
             $conn->bindValue(":remedioContinuo", $paci->getRemedioContinuo());
             $conn->bindValue(":qualRemedio", $paci->getQualRemedio());
-            $conn->bindValue(":patologia", 'nao');
+            $conn->bindValue(":patologia", $paci->getQualPatologia());  
             $conn->bindValue(":qualPatologia", $paci->getQualPatologia());
-            $conn->bindValue(":tecResponsavel", $paci->getTecResponsavel());
-            $conn->bindValue(":horarioTec", 'noite');
+            $conn->bindValue(":tecResponsavel", $paci->getTecResponsavel()); 
+            $conn->bindValue(":horarioTec", $paci->getHorarioTec() ); 
             //$conn->bindValue(":exames", 'microbiologia');
-            $conn->bindValue(":historicoMedico", $paci->getHistoricoMedico());
+            $conn->bindValue(":historicoMedico", $paci->getHistoricoMedico()); 
             $conn->bindValue(":resultados", $paci->getResultados());
             return $conn->execute(); // Executa o update
         }catch(PDOException $ex){

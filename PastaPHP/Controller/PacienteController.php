@@ -51,13 +51,13 @@ if(isset($_POST['salvar_edicao'])){
     $paciente->setEmailContato($_POST['email']);
     $paciente->setNomeMae($_POST['nomemae']);
     $paciente->setEndereco($_POST['endereco']);
-    //$paciente->setExames($_POST['exames']);
+    $paciente->setExames($_POST['exames']); 
     $paciente->setRemedioContinuo($_POST['remedio']);
     $paciente->setQualRemedio($_POST['qualremedio']);
-    //$paciente->setPatologia($_POST['patologia']);
+    $paciente->setPatologia($_POST['patologia']);  
     $paciente->setQualPatologia($_POST['patologiaQual']);
     $paciente->setTecResponsavel($_POST['alunoResponsavel']);
-    //$paciente->setHorarioTec($_POST['periodo']);
+    $paciente->setHorarioTec($_POST['periodo']);  
     $paciente->setHistoricoMedico($_POST['historicoMedico']);
     $paciente->setResultados($_POST['resultados']);
     
@@ -77,7 +77,7 @@ function LerPaciente(){
         echo " <tr>
 
                             <td>{$pac->getId()}</td>
-                            <td>{$pac->getNome()}</td>
+                            
                             <td>{$pac->getCpf()}</td>
                             <td>{$pac->getDataNascimento()}</td>
                             <td>{$pac->getTelContato()}</td>

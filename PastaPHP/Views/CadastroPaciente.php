@@ -92,7 +92,7 @@
                         value="<?= isset($paciente) && $paciente->getQualRemedio() ? $paciente->getQualRemedio() : '' ?>">
                     </div>
 
-                //    <div class="mb-3">
+                    <div class="mb-3">
                         <h4>Alguma patologia que trata</h4>
                         <label for="ipatologiaSim" class="form-check-label">SIM</label>
                         <input type="radio" class="form-check-input" name="patologia" value="Sim" id="ipatologiaSim"
@@ -112,7 +112,7 @@
                         <h4>Técnico responsável</h4>
                         <label for="alunoResponsavel" class="form-label">Nome</label>
                         <input type="text" class="form-control" name="alunoResponsavel" id="alunoResponsavel"
-                        value="<?= isset($paciente) && $paciente->getAlunoResponsavel() ? $paciente->getAlunoResponsavel() : '' ?>">
+                        value="<?= isset($paciente) && $paciente->getTecResponsavel() ? $paciente->getTecResponsavel() : '' ?>">
 
                         <label for="iperiodoMatutino" class="form-check-label">Matutino</label>
                         <input type="radio" class="form-check-input" name="periodo" value="Matutino" id="iperiodoMatutino"
@@ -125,23 +125,22 @@
 
                     <div class="mb-3">
                         <label for="ihistoricoMedico" class="form-label">Histórico Médico</label>
-                        <textarea class="form-control" id="ihistoricoMedico" name="historicoMedico" rows="3"
-                        value="<?= isset($paciente) && $paciente->getHistoricoMedico() ? $paciente->getHistoricoMedico() : '' ?>"></textarea>
+                        <textarea class="form-control" id="ihistoricoMedico" name="historicoMedico" rows="3">
+                            <?= isset($paciente) && $paciente->getHistoricoMedico() ? $paciente->getHistoricoMedico() : '' ?></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="iresultados" class="form-label">Resultados</label>
-                        <textarea class="form-control" id="iresultados" name="resultados" rows="3"
-                        value="<?= isset($paciente) && $paciente->getResultados() ? $paciente->getResultados() : '' ?>"></textarea>
+                        <textarea class="form-control" id="iresultados" name="resultados" rows="3">
+                            <?= isset($paciente) && $paciente->getResultados() ? $paciente->getResultados() : '' ?></textarea>
                     </div>
 
                     <div class="d-grid">
-
-                      <?php if(isset($paciente) && $paciente->getId()): ?>
-                            <button type="submit" name="salvar_edicao" class="btn btn-primary">Salvar Edição</button>
-                    <?php else: ?>
-                         <button type="submit" name="Cadastrar" class="btn btn-success">Cadastrar</button>
-                    <?php endif; ?>
+                        <?php if(isset($paciente) && $paciente->getId()): ?>
+                          <button type="submit" name="salvar_edicao" class="btn btn-primary">Salvar Edição</button>
+                        <?php else: ?>
+                          <button type="submit" name="Cadastrar" class="btn btn-success">Cadastrar</button>
+                        <?php endif; ?>
                     </div>
 
                     </form>
@@ -160,7 +159,7 @@
           <thead class="table-light">
             <tr>
               <th scope="col">Id</th>
-              <th scope="col">Nome</th>
+           <!--   <th scope="col">Nome</th> -->
               <th scope="col">CPF</th>
               <th scope="col">Data de Nascimento</th>
               <th scope="col">Telefone</th>

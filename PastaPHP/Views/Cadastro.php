@@ -10,15 +10,10 @@
 </head>
 
 <body>
-    <!-- sem borde/ 
-     <div class="conteiner p-4">
-        <nav class="navbar" background-color:rgb 177, 238, 190 >
-            <div class="container">
-                <a href="Home.php" class="navbar-brand text-black">HOME</a>
-                <a href="login.php" class="navbar-brand text-black">LOGIN</a>
-            </div>
-        </nav>
-    </div>css-->
+                <?php
+                //require_once __DIR__. '/../Controller/PacienteController.php';
+                require_once __DIR__. '/../Controller/ProfessorController.php';
+                ?>
     <div class="container sem-borda">
         <div class="row justify-content-center mt-4">
             <div class="col-md-5">
@@ -53,11 +48,7 @@
                     </thead>
                     <tbody>
                         <?php 
-                        
-                        require '../Controller/ProfessorController.php';
-
                         LerProfessor();
-                        
                         ?>
 
 

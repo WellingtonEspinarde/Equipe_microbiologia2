@@ -39,8 +39,6 @@ function LerProfessor(){
 
     $lista = $professorDao->readProfessor();
 
-    //print_r($lista);
-
     foreach ($lista as $prof) {
         echo " <tr>
 

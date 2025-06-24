@@ -8,6 +8,10 @@
     <title>Cadastro de Paciente</title>
 </head>
 <body>
+
+                <?php
+                require_once __DIR__. '/../Controller/PacienteController.php';
+                ?>
    <div class="container">
     <div class="row justify-content-center mt-4">
         <div class="col-md-5">
@@ -18,99 +22,126 @@
                 </div>
                 
                 <div class="card-body formulario-padrao">
-                    <form action="../Controller/PacienteController.php" method="post">
+                    <form action="../Controller/PacienteController.php" method="post" >
+                    <input type="hidden" name="id" value="<?= isset($paciente) && $paciente->getId() ? $paciente->getId() : '' ?>">
 
                     <div class="mb-3">
                         <label for="inome" class="form-label">Nome Completo</label>
-                        <input type="text" class="form-control" id="inome" name="nome" required>
+                        <input type="text" class="form-control" id="inome" name="nome" required 
+                        value="<?= isset($paciente) && $paciente->getNome() ? $paciente->getNome() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="icpf" class="form-label">CPF</label>
-                        <input type="text" class="form-control" id="icpf" name="cpf" required>
+                        <input type="text" class="form-control" id="icpf" name="cpf" required
+                        value="<?= isset($paciente) && $paciente->getCpf() ? $paciente->getCpf() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="idataNascimento" class="form-label">Data de Nascimento</label>
-                        <input type="date" class="form-control" name="dataNascimento" id="idataNascimento" required>
+                        <input type="date" class="form-control" name="dataNascimento" id="idataNascimento" required
+                        value="<?= isset($paciente) && $paciente->getDataNascimento() ? $paciente->getDataNascimento() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="itelefone" class="form-label">Telefone para contato</label>
-                        <input type="tel" class="form-control" name="telefone" id="itelefone">
+                        <input type="tel" class="form-control" name="telefone" id="itelefone"
+                        value="<?= isset($paciente) && $paciente->getTelContato() ? $paciente->getTelContato() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="iemail" class="form-label">Email para contato</label>
-                        <input type="email" class="form-control" name="email" id="iemail">
+                        <input type="email" class="form-control" name="email" id="iemail"
+                        value="<?= isset($paciente) && $paciente->getEmailContato() ? $paciente->getEmailContato() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="inomemae" class="form-label">Nome da mãe</label>
-                        <input type="text" class="form-control" name="nomemae" id="inomemae">
+                        <input type="text" class="form-control" name="nomemae" id="inomemae"
+                        value="<?= isset($paciente) && $paciente->getNomeMae() ? $paciente->getNomeMae() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <label for="iendereco" class="form-label">Endereço</label>
-                        <input type="text" class="form-control" id="iendereco" name="endereco" required>
+                        <input type="text" class="form-control" id="iendereco" name="endereco" required
+                        value="<?= isset($paciente) && $paciente->getEndereco() ? $paciente->getEndereco() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <h4>Exame solicitado</h4>
                         <label for="imicrobiologia" class="form-check-label">Microbiologia</label>
-                        <input type="radio" class="form-check-input" name="exames" value="microbiologia" id="imicrobiologia">
+                        <input type="radio" class="form-check-input" name="exames" value="microbiologia" id="imicrobiologia"
+                       checked>
                     </div>
 
                     <div class="mb-3">
                         <h4>Toma remédio contínuo</h4>
                         <label for="iremedioSim" class="form-check-label">SIM</label>
-                        <input type="radio" class="form-check-input" name="remedio" value="Sim" id="iremedioSim">
+                        <input type="radio" class="form-check-input" name="remedio" value="Sim" id="iremedioSim"
+                         <?php isset($paciente) && strcmp($paciente->getRemedioContinuo(),"Sim") ? print "checked" :  ''?>>
+                        
 
                         <label for="iremedioNao" class="form-check-label">NÃO</label>
-                        <input type="radio" class="form-check-input" name="remedio" value="Nao" id="iremedioNao">
+                        <input type="radio" class="form-check-input" name="remedio" value="Nao" id="iremedioNao"
+                        <?php isset($paciente) && strcmp($paciente->getRemedioContinuo(),"Nao") ? print "checked" :  ''?>>
+                        
 
                         <br />
                         <label for="iremedioQual" class="form-label">Qual?</label>
-                        <input type="text" class="form-control" name="qualremedio" id="iremedioQual" />
+                        <input type="text" class="form-control" name="qualremedio" id="iremedioQual" 
+                        value="<?= isset($paciente) && $paciente->getQualRemedio() ? $paciente->getQualRemedio() : '' ?>">
                     </div>
 
-                    <div class="mb-3">
+                //    <div class="mb-3">
                         <h4>Alguma patologia que trata</h4>
                         <label for="ipatologiaSim" class="form-check-label">SIM</label>
-                        <input type="radio" class="form-check-input" name="patologia" value="Sim" id="ipatologiaSim">
+                        <input type="radio" class="form-check-input" name="patologia" value="Sim" id="ipatologiaSim"
+                        <?php isset($paciente) && strcmp($paciente->getPatologia(),"Sim") ? print "checked" :  ''?>>
 
                         <label for="ipatologiaNao" class="form-check-label">NÃO</label>
-                        <input type="radio" class="form-check-input" name="patologia" value="Nao" id="ipatologiaNao">
+                        <input type="radio" class="form-check-input" name="patologia" value="Nao" id="ipatologiaNao"
+                        <?php isset($paciente) && strcmp($paciente->getPatologia(),"Nao") ? print "checked" :  ''?>>
 
                         <br />
                         <label for="ipatologiaQual" class="form-label">Qual?</label>
-                        <input type="text" class="form-control" name="patologiaQual" id="ipatologiaQual" />
+                        <input type="text" class="form-control" name="patologiaQual" id="ipatologiaQual" 
+                        value="<?= isset($paciente) && $paciente->getPatologia() ? $paciente->getPatologia() : '' ?>">
                     </div>
 
                     <div class="mb-3">
                         <h4>Técnico responsável</h4>
                         <label for="alunoResponsavel" class="form-label">Nome</label>
-                        <input type="text" class="form-control" name="alunoResponsavel" id="alunoResponsavel">
+                        <input type="text" class="form-control" name="alunoResponsavel" id="alunoResponsavel"
+                        value="<?= isset($paciente) && $paciente->getAlunoResponsavel() ? $paciente->getAlunoResponsavel() : '' ?>">
 
                         <label for="iperiodoMatutino" class="form-check-label">Matutino</label>
-                        <input type="radio" class="form-check-input" name="periodo" value="Matutino" id="iperiodoMatutino">
+                        <input type="radio" class="form-check-input" name="periodo" value="Matutino" id="iperiodoMatutino"
+                        <?php isset($paciente) && strcmp($paciente->getHorarioTec(),"Matutino") ? print "checked" :  ''?>>
 
                         <label for="iperiodoNoturno" class="form-check-label">Noturno</label>
-                        <input type="radio" class="form-check-input" name="periodo" value="Noturno" id="iperiodoNoturno">
+                        <input type="radio" class="form-check-input" name="periodo" value="Noturno" id="iperiodoNoturno"
+                        <?php isset($paciente) && strcmp($paciente->getHorarioTec(),"Noturno") ? print "checked" :  ''?>>
                     </div>
 
                     <div class="mb-3">
                         <label for="ihistoricoMedico" class="form-label">Histórico Médico</label>
-                        <textarea class="form-control" id="ihistoricoMedico" name="historicoMedico" rows="3"></textarea>
+                        <textarea class="form-control" id="ihistoricoMedico" name="historicoMedico" rows="3"
+                        value="<?= isset($paciente) && $paciente->getHistoricoMedico() ? $paciente->getHistoricoMedico() : '' ?>"></textarea>
                     </div>
 
                     <div class="mb-3">
                         <label for="iresultados" class="form-label">Resultados</label>
-                        <textarea class="form-control" id="iresultados" name="resultados" rows="3"></textarea>
+                        <textarea class="form-control" id="iresultados" name="resultados" rows="3"
+                        value="<?= isset($paciente) && $paciente->getResultados() ? $paciente->getResultados() : '' ?>"></textarea>
                     </div>
 
                     <div class="d-grid">
-                        <input type="submit" name="Cadastrar" value="cadastrar" class="btn btn-primary">
+
+                      <?php if(isset($paciente) && $paciente->getId()): ?>
+                            <button type="submit" name="salvar_edicao" class="btn btn-primary">Salvar Edição</button>
+                    <?php else: ?>
+                         <button type="submit" name="Cadastrar" class="btn btn-success">Cadastrar</button>
+                    <?php endif; ?>
                     </div>
 
                     </form>
@@ -150,7 +181,6 @@
           </thead>
           <tbody>
             <?php                         
-              require '../Controller/PacienteController.php';
               LerPaciente();                        
             ?>
           </tbody>

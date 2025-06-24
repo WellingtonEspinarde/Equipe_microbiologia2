@@ -30,34 +30,7 @@ class PacienteDao{
         }
     }
 
-   /*  public function SelectId($id){
-
-        try{
-            $sql = "SELECT * FROM paciente WHERE id = :id";
-            $connect = ConnectionFactory::getConnection()->query($sql); 
-            $connect->bindValue(":id",$id); // fetch
-            $connect ->execute();
-
-            return $connect->fetch(PDO::FETCH_ASSOC);
-
-
-        }catch(PDOException $ex){
-             echo "<p> Error: "  . $ex->getMessage() . "<p>";
-        }
-     }*/
-
-      public function readPaciente(){
-
-        try{
-           
-            $sql = "SELECT * FROM paciente";
-            $connect = ConnectionFactory::getConnection()->query($sql);
-            $connect ->execute();
-
-            $list = $connect->fetchAll(PDO::FETCH_ASSOC);
-
-            $listPaciente= array();
-            foreach($list as $line){
+     public function listaPaciente($line){
                 $Pacienteline = new Paciente();
                 $Pacienteline->setId($line ['id']);
                 $Pacienteline->setNome($line ['nome']);
@@ -76,8 +49,21 @@ class PacienteDao{
                 $Pacienteline->setExames($line ['exames']);
                 $Pacienteline->setHistoricoMedico($line ['historicoMedico']);
                 $Pacienteline->setResultados($line ['resultados']);
-                
-                $listPaciente[] = $Pacienteline;
+        return $Pacienteline;
+    }
+
+      public function readPaciente(){
+        try{
+           
+            $sql = "SELECT * FROM paciente";
+            $connect = ConnectionFactory::getConnection()->query($sql);
+            $connect ->execute();
+
+            $list = $connect->fetchAll(PDO::FETCH_ASSOC);
+
+            $listPaciente= array();
+            foreach($list as $line){
+                $listPaciente[] = $this->listaPaciente($line);
             }
 
             return $listPaciente;
@@ -86,6 +72,74 @@ class PacienteDao{
              echo "<p> Error: "  . $ex->getMessage() . "<p>";
         }
      }
+
+     public function editar(Paciente $paci){
+        try{
+            $sql = "UPDATE paciente SET 
+            nome=:nome,
+            cpf=:cpf,
+            dataNascimento=:dataNascimento,
+            telContato=:telContato,
+            emailContato=:emailContato,
+            nomeMae=:nomeMae,
+            endereco=:endereco,
+            remedioContinuo=:remedioContinuo,
+            qualRemedio=:qualRemedio,
+            patologia=:patologia,
+            qualPatologia=:qualPatologia,
+            tecResponsavel=:tecResponsavel,
+            horarioTec=:horarioTec,
+            
+            historicoMedico=:historicoMedico,
+            resultados=:resultados WHERE id = :id";
+            echo $sql;
+            echo $paci->__toString();
+            $conn = ConnectionFactory::getConnection()->prepare($sql);
+            $conn->bindValue(":id", $paci->getId());
+            $conn->bindValue(":nome", $paci->getNome());
+            $conn->bindValue(":cpf", $paci->getCpf());
+            $conn->bindValue(":dataNascimento", $paci->getDataNascimento());
+            $conn->bindValue(":telContato", $paci->getTelContato());
+            $conn->bindValue(":emailContato", $paci->getEmailContato());
+            $conn->bindValue(":nomeMae", $paci->getNomeMae());
+            $conn->bindValue(":endereco", $paci->getEndereco());
+            //$conn->bindValue(":exames", $paci->getExames());
+            $conn->bindValue(":remedioContinuo", $paci->getRemedioContinuo());
+            $conn->bindValue(":qualRemedio", $paci->getQualRemedio());
+            $conn->bindValue(":patologia", 'nao');
+            $conn->bindValue(":qualPatologia", $paci->getQualPatologia());
+            $conn->bindValue(":tecResponsavel", $paci->getTecResponsavel());
+            $conn->bindValue(":horarioTec", 'noite');
+            //$conn->bindValue(":exames", 'microbiologia');
+            $conn->bindValue(":historicoMedico", $paci->getHistoricoMedico());
+            $conn->bindValue(":resultados", $paci->getResultados());
+            return $conn->execute(); // Executa o update
+        }catch(PDOException $ex){
+            echo "<p> Erro ao editar </p> <p> $ex </p>";
+        }
+    }
+
+    
+
+    public function buscarPorId($id){
+        try{
+            $sql = "SELECT * FROM paciente WHERE id = :id";
+            $conn = ConnectionFactory::getConnection()->prepare($sql);
+            $conn->bindValue(":id", $id);
+            $conn->execute();
+            $row = $conn->fetch(PDO::FETCH_ASSOC); // Busca apenas uma linha
+            if($row){
+                return $this->listaPaciente($row);
+            }
+            return null; // Retorna null se não encontrar o ID
+        }catch(PDOException $ex){
+            echo "<p>Erro ao buscar Paciente por ID: </p> <p> {$ex->getMessage()} </p>";
+            return null;
+        }
+    }
+
+
+
 
 
 

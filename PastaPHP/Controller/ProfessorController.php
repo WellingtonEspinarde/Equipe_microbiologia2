@@ -61,7 +61,7 @@ function LerProfessor(){
         echo " <tr>
 
                             <td>{$prof->getId()}</td>
-                            <td>{$prof->getNome()}</td>
+                            
                             <td>{$prof->getCpf()}</td>
                             <td>{$prof->getEmail()}</td>
                             <td>{$prof->getAnoLetivo()}</td>

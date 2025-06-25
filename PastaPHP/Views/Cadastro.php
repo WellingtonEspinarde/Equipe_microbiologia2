@@ -36,7 +36,7 @@
                 <thead>
                     <tr>
                     <th scope="col">Id</th>
-                    <th scope="col">Nome</th>
+                <!--<th scope="col">Nome</th> -->
                     <th scope="col">CPF</th>
                     <th scope="col">Email</th>
                     <th scope="col">Ano Letivo</th>
